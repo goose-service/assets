@@ -1,0 +1,134 @@
+@import 'assets/normalize';
+
+:root {
+  --font-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+body {
+  padding: 0 64px;
+}
+body, input, button {
+  font-family: var(--font-base);
+  color: #111;
+}
+main {
+  margin: 0 auto;
+  max-width: 900px;
+}
+a {
+  color: #111;
+}
+
+.header {
+  padding: 36px 0 0;
+  h1 {
+    margin: 0;
+    font-family: 'ortsa', sans-serif;
+    font-size: 42px;
+    line-height: 1.05;
+    letter-spacing: -.5px;
+  }
+  p {
+    margin: 8px 0 0;
+    font-size: 15px;
+    line-height: 1.15;
+  }
+}
+
+.container {
+  display: grid;
+  gap: 64px 0;
+  margin: 42px 0 0;
+  padding: 0 0 160px;
+}
+
+.font-section {
+  box-shadow:
+    0 12px 36px hsl(0 0% 0% / 12%),
+    0 4px 128px hsl(0 0% 0% / 10%);
+  box-sizing: border-box;
+  padding: 52px 64px 64px;
+  &__header {
+    h1 {
+      margin: 0;
+      font-size: 32px;
+      line-height: 1.05;
+      letter-spacing: -.5px;
+    }
+    ul {
+      margin: 8px 0 0;
+      padding: 0 0 0 20px;
+      font-size: 15px;
+      line-height: 1.36;
+      color: hsl(0 0% 20%);
+    }
+  }
+}
+// outline
+.font-section-wrap {
+  --outline-width: 1px;
+  --outline-size: 20px;
+  --outline-bg-color: hsla(0 0% 0% / 0%);
+  --outline-bg-image: linear-gradient(45deg, #b0b0b0 25%, transparent 25%), linear-gradient(-45deg, #b0b0b0 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #b0b0b0 75%), linear-gradient(-45deg, transparent 75%, #b0b0b0 75%);
+  --outline-bg-position: 0 0, 0 5px, 5px -5px, -5px 0px;
+  --outline-bg-size: 10px 10px;
+
+  position: relative;
+  &:before,
+  &:after,
+  > i:before,
+  > i:after {
+    content: '';
+    display: block;
+    position: absolute;
+    background: var(--outline-color);
+    background-color: var(--outline-bg-color);
+    background-image: var(--outline-bg-image);
+    background-position: var(--outline-bg-position);
+    background-size: var(--outline-bg-size);
+    border-radius: calc(var(--outline-width) * .5);
+  }
+  &:before,
+  &:after {
+    width: calc(100% + (var(--outline-size) * 2));
+    height: var(--outline-width);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &:before {
+    top: 0;
+  }
+  &:after {
+    bottom: 0;
+  }
+  > i:before,
+  > i:after {
+    width: var(--outline-width);
+    height: calc(100% + (var(--outline-size) * 2));
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  > i:before {
+    left: 0;
+  }
+  > i:after {
+    right: 0;
+  }
+}
+
+.weights {
+  display: grid;
+  gap: 36px;
+  margin: 36px 0 0 0;
+  > section {
+    > h1 {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.05;
+      font-weight: 600;
+    }
+    > font-preview {
+      display: block;
+      margin: 8px 0 0;
+    }
+  }
+}

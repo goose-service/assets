@@ -1,0 +1,10 @@
+# directories
+node_modules/
+.idea/
+.vscode/
+
+# files
+.DS_Store
+yarn.lock
+package-lock.json
+bun.lockb
