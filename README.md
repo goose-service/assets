@@ -1,0 +1,2 @@
+# assets
+redgoose service assets
