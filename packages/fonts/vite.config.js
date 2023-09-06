@@ -11,7 +11,6 @@ const config = defineConfig(({ mode }) => {
       port: 4000,
       open: false,
     },
-    css: {},
     build: {
       outDir: '../../dest/fonts',
       assetsDir: '',

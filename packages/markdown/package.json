@@ -1,3 +1,19 @@
 {
-  "name": "@redgoose/markdown"
+  "name": "@redgoose/markdown",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "marked": "^8.0.0",
+    "sass": "^1.66.1",
+    "vite": "^4.4.9"
+  }
 }
