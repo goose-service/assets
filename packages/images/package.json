@@ -1,0 +1,11 @@
+{
+  "name": "@redgoose/base",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "sass": "^1.66.1",
+    "vite": "^4.4.9"
+  }
+}

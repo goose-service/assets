@@ -1,5 +1,9 @@
 {
   "name": "@redgoose/fonts",
+  "scripts": {
+    "dev": "vite",
+    "build": "node build.mjs"
+  },
   "browserslist": [
     "> 1%",
     "last 2 versions"
@@ -7,12 +11,7 @@
   "engines": {
     "node": ">=20"
   },
-  "scripts": {
-    "dev": "vite",
-    "build": "node build.mjs"
-  },
   "devDependencies": {
-    "cash-dom": "^8.1.5",
     "sass": "^1.66.1",
     "vite": "^4.4.9"
   }
