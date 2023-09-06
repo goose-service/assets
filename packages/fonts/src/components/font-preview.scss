@@ -18,7 +18,12 @@
     }
     &:empty:before {
       content: 'Empty text';
-      color: hsl(0 0% 65%);
+      color: hsl(0 0% 85%);
+    }
+  }
+  @media (screen and max-width: 768px) {
+    &__body {
+      font-size: 22px;
     }
   }
 }

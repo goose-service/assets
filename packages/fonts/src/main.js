@@ -1,5 +1,6 @@
 import { randomPick, wordEng, wordKor } from './example'
 import FontPreview from './components/font-preview'
+import './main.scss'
 
 customElements.define('font-preview', FontPreview)
 

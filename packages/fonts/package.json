@@ -2,7 +2,7 @@
   "name": "@redgoose/fonts",
   "scripts": {
     "dev": "vite",
-    "build": "node build.mjs"
+    "build": "vite build"
   },
   "browserslist": [
     "> 1%",

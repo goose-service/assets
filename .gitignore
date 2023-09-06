@@ -2,6 +2,7 @@
 node_modules/
 .idea/
 .vscode/
+packages/**/dist
 
 # files
 .DS_Store
