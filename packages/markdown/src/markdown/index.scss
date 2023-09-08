@@ -3,16 +3,19 @@
 $ratios: '2/1', '1/2', '6/4', '4/6', '4/3', '3/4', '16/9', '21/9';
 
 .redgoose-body {
-  --color-text: hsl(0 0% 12%);
-  --color-text-key: hsl(350 70% 42%);
-  --color-text-title: hsl(0, 0%, 6.67%);
-  --color-text-code: hsl(258 100% 65%);
-  --color-content-bg: hsl(210 9% 95%);
+  --color-text-base: var(--markdown-color-base, hsl(0 0% 0%));
+  --color-text-title: var(--markdown-color-title, hsl(0, 0%, 6.67%));
+  --color-text-key: var(--markdown-color-key, hsl(350 70% 42%));
+  --color-text-code: var(--markdown-color-code, hsl(258 100% 65%));
+  --color-content-bg: var(--markdown-color-bg, hsl(210 9% 95%));
   --color-content-line: hsl(0 0% 78%);
+  --color-code-bg: var(--markdown-code-bg, hsl(210 9% 95%));
+  --color-code-text: var(--markdown-code-color, hsl(0 0% 0%));
+  --color-blockquote-bg: var(--markdown-code-color, hsl(210 9% 95%));
 
   font-size: var(--size-text, 1rem);
   line-height: var(--size-text-length, 1.68);
-  color: var(--color-text);
+  color: var(--color-text-base);
 
   h1, h2, h3, h4, h5, h6 {
     line-height: 1.25;
@@ -84,7 +87,7 @@ $ratios: '2/1', '1/2', '6/4', '4/6', '4/3', '3/4', '16/9', '21/9';
       letter-spacing: 8px;
       font-weight: 800;
       line-height: 1;
-      color: var(--color-text);
+      color: var(--color-text-base);
     }
   }
   table {
@@ -116,12 +119,12 @@ $ratios: '2/1', '1/2', '6/4', '4/6', '4/3', '3/4', '16/9', '21/9';
   }
   code {
     word-break: break-word;
-    color: var(--color-text-code);
+    color: var(--color-code-text);
   }
   pre {
     margin: var(--size-margin, (2rem 0));
     padding: 1rem;
-    background: var(--color-content-bg);
+    background: var(--color-code-bg);
     font-size: .9375em;
     line-height: 1.5;
     overflow: auto;
@@ -134,7 +137,7 @@ $ratios: '2/1', '1/2', '6/4', '4/6', '4/3', '3/4', '16/9', '21/9';
       background: none;
       white-space: pre;
       border-radius: 0;
-      color: var(--color-text-base);
+      color: var(--color-code-text);
       font-size: 1em;
     }
   }
@@ -169,6 +172,7 @@ $ratios: '2/1', '1/2', '6/4', '4/6', '4/3', '3/4', '16/9', '21/9';
     box-sizing: border-box;
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
+    background-color: var(--color-blockquote-bg);
     &:after {
       content: '';
       position: absolute;
@@ -212,12 +216,15 @@ $ratios: '2/1', '1/2', '6/4', '4/6', '4/3', '3/4', '16/9', '21/9';
   // dark mode
   &--dark {
     @include mixins.dark-mode() {
-      --color-text: hsl(0 0% 86%);
-      --color-text-key: hsl(142 76% 46%);
-      --color-text-title: hsl(0 0% 100%);
-      --color-text-code: hsl(41 98% 58%);
+      --color-text-base: var(--markdown-color-base, hsl(0 0% 0%));
+      --color-text-title: var(--markdown-color-title, hsl(0 0% 100%));
+      --color-text-key: var(--markdown-color-key, hsl(142 76% 46%));
+      --color-text-code: var(--markdown-color-code, hsl(41 98% 58%));
       --color-content-bg: hsl(0 0% 12%);
       --color-content-line: hsl(0 0% 30%);
+      --color-code-bg: var(--markdown-code-bg, hsl(0 0% 12%));
+      --color-code-text: var(--markdown-code-color, hsl(0 0% 100%));
+      --color-blockquote-bg: var(--markdown-blockquote-bg, hsl(0 0% 12%));
     }
   }
 
