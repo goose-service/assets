@@ -1,0 +1,25 @@
+@mixin dark-mode($root: false)
+{
+  @if ($root)
+  {
+    &[data-theme=dark] {
+      @content;
+    }
+    &:not([data-theme=light]) {
+      @media (prefers-color-scheme: dark) {
+        @content;
+      }
+    }
+  }
+  @else
+  {
+    html[data-theme=dark] & {
+      @content;
+    }
+    @media (prefers-color-scheme: dark) {
+      html:not([data-theme=light]) & {
+        @content;
+      }
+    }
+  }
+}

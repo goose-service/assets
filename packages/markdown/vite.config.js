@@ -1,4 +1,5 @@
 import { defineConfig, loadEnv } from 'vite'
+import { compileStylesheet } from './plugins/compileStylesheet'
 
 const config = defineConfig(({ mode }) => {
   const path = process.cwd()
@@ -11,16 +12,23 @@ const config = defineConfig(({ mode }) => {
       open: false,
     },
     build: {
-      // outDir: '../../dest/markdown',
-      // assetsDir: '',
+      outDir: '../../dest/markdown',
+      assetsDir: '',
       emptyOutDir: true,
       rollupOptions: {
         output: {
-          // assetFileNames: (assetInfo) => {},
+          // assetFileNames: (assetInfo) => {
+          //   const info = assetInfo.name.split('.')
+          //   const name = info[0]
+          //   const ext = info[info.length - 1]
+          //   return `[name]-[hash][extname]`
+          // },
         },
       },
     },
-    plugins: [],
+    plugins: [
+      compileStylesheet(),
+    ],
   }
 })
 

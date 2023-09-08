@@ -1,0 +1,75 @@
+// responsive
+@mixin responsive($range)
+{
+  @if $range == mobile-large
+  {
+    @media (min-width: 480px) { @content; }
+  }
+  @else if $range == tablet
+  {
+    @media (min-width: 768px) { @content; }
+  }
+  @else if $range == desktop
+  {
+    @media (min-width: 1024px) { @content; }
+  }
+  @else if $range == max
+  {
+    @media (min-width: 1280px) { @content; }
+  }
+}
+
+// dark mode
+@mixin dark-mode()
+{
+  html[data-theme=dark] & {
+    @content;
+  }
+  @media (prefers-color-scheme: dark) {
+    html:not([data-theme=light]) & {
+      @content;
+    }
+  }
+}
+
+// for retina display
+@mixin retina()
+{
+  @media (-webkit-min-device-pixel-ratio: 2) { @content; }
+}
+
+// scroll style
+@mixin custom-scroll-style($size:4px)
+{
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,.3);
+    border-radius: $size;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(0,0,0,.4);
+  }
+  @include dark-mode() {
+    &::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,.2);
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,.3);
+    }
+  }
+}
+
+// background blur
+@mixin background-blur($size)
+{
+  @supports (backdrop-filter: blur($size)) {
+    backdrop-filter: blur($size);
+    @content;
+  }
+}

@@ -15,7 +15,6 @@ const config = defineConfig(({ mode }) => {
       outDir: '../../dest/fonts',
       assetsDir: '',
       emptyOutDir: true,
-      cssCodeSplit: false,
       rollupOptions: {
         output: {
           assetFileNames: (assetInfo) => {
