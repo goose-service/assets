@@ -1,15 +1,27 @@
 {
   "name": "@redgoose/assets",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": "redgoose <scripter@me.com>",
-  "keywords": [ "redgoose", "assets" ],
-  "license": "MIT",
-  "files": [ "dest" ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gooose-eth/assets.git"
   },
+  "files": [
+    "dest"
+  ],
+  "keywords": [
+    "redgoose",
+    "assets"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "./scripts/build.sh",
+    "demo": "bun run ./scripts/demo.js"
+  },
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "hono": "^3.5.8"
+  }
 }

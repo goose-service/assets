@@ -17,6 +17,7 @@ const config = defineConfig(({ mode }) => {
       emptyOutDir: true,
       rollupOptions: {
         output: {
+          entryFileNames: 'assets/[name]-[hash].js',
           assetFileNames: (assetInfo) => {
             const info = assetInfo.name.split('.')
             const name = info[0]
@@ -34,7 +35,7 @@ const config = defineConfig(({ mode }) => {
                 }
                 break
             }
-            return `[name]-[hash][extname]`
+            return `assets/[name]-[hash][extname]`
           },
         },
       },

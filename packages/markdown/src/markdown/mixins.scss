@@ -13,9 +13,17 @@
   {
     @media (min-width: 1024px) { @content; }
   }
-  @else if $range == max
+  @else if $range == desktop-1280
   {
     @media (min-width: 1280px) { @content; }
+  }
+  @else if $range == desktop-1440
+  {
+    @media (min-width: 1440px) { @content; }
+  }
+  @else if $range == desktop-1920
+  {
+    @media (min-width: 1920px) { @content; }
   }
 }
 

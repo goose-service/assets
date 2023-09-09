@@ -1,13 +1,16 @@
-ARG ALPINE_VERSION=3.16.5
+ARG ALPINE_VERSION=3.18.3
 FROM alpine:${ALPINE_VERSION}
 MAINTAINER redgoose <scripter@me.com>
 
+WORKDIR /app
 ENV PORT=5050
 
-WORKDIR /app
-COPY ./dest /app
+RUN apk add --no-cache curl nginx
+
+USER nobody
+
+COPY --chown=nobody ./dest /app
 
 EXPOSE $PORT
 
-# TODO: 나중에 좀더 다듬기
-# CMD ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]
+CMD [ "nginx", "-g", "daemon off;" ]

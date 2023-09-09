@@ -13,7 +13,7 @@ const config = defineConfig(({ mode }) => {
     },
     build: {
       outDir: '../../dest/markdown',
-      assetsDir: '',
+      assetsDir: 'assets',
       emptyOutDir: true,
       rollupOptions: {
         output: {

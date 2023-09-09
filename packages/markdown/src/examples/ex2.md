@@ -212,24 +212,21 @@ end code block.
 
 ### 2.6. 링크
 
-#### 참조링크
-
-```
-[link keyword][id]
-[id]: URL "Optional Title here"
-
-Link: [Google][googlelink]
-[googlelink]: https://google.com "Go google"
-```
-
-Link: [Google][googlelink]
-[googlelink]: https://google.com "Go google"
-
-* 인라인 링크
-```
-syntax: [Title](link)
-```
-Link: [Google](https://google.com, "google link")
+- 참조링크
+  ```
+  [link keyword][id]
+  [id]: URL "Optional Title here"
+  
+  Link: [Google][googlelink]
+  [googlelink]: https://google.com "Go google"
+  ```
+  Link: [Google][googlelink]
+  [googlelink]: https://google.com "Go google"
+- 인라인 링크  
+  ```
+  syntax: [Title](link)
+  ```
+  Link: [Google](https://google.com, "google link")
 
 #### 자동연결
 ```
