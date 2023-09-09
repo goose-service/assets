@@ -7,9 +7,7 @@ ENV PORT=5050
 
 RUN apk add --no-cache curl nginx
 
-USER nobody
-
-COPY --chown=nobody ./dest /app
+COPY ./dest /app
 
 EXPOSE $PORT
 
