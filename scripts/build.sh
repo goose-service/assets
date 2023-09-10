@@ -16,6 +16,9 @@ cd $DIR/packages/markdown
 vite build
 
 # copy resource
+resource_files=( "robots.txt" "index.html" "style.css" )
 cd $DIR/resource
-cp robots.txt ../dest
-cp index.html ../dest
+for file in "${resource_files[@]}"
+do
+  cp $file ../dest
+done
