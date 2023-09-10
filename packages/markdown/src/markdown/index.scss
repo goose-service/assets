@@ -4,75 +4,103 @@ $ratios: '2/1', '1/2', '6/4', '4/6', '4/3', '3/4', '16/9', '21/9';
 
 .redgoose-body {
   // typography
-  --color-base: var(--markdown-color-base, hsl(0 0% 0%));
-  --color-title: var(--markdown-color-title, hsl(0, 0%, 6.67%));
-  --color-key: var(--markdown-color-key, hsl(350 74% 42%));
-  --size-text: var(--markdown-size-text, 1rem);
-  --size-text-length: var(--markdown-size-text-length, 1.68);
+  --mk-color-base: var(--markdown-color-base, hsl(0 0% 0%));
+  --mk-color-title: var(--markdown-color-title, hsl(0, 0%, 6.67%));
+  --mk-color-key: var(--markdown-color-key, hsl(350 74% 42%));
+  --mk-size-text: var(--markdown-size-text, 1rem);
+  --mk-size-text-length: var(--markdown-size-text-length, 1.68);
+  --mk-size-side-padding: var(--markdown-size-side-padding, 24px);
 
   // margin
-  --size-margin: var(--markdown-size-margin, 2rem);
-  --size-header-top: var(--markdown-header-top, 0);
+  --mk-size-margin: var(--markdown-size-margin, 2rem);
+
+  // heading
+  --mk-hd-scroll-margin-top: var(--markdown-head-scroll-margin-top, unset);
 
   // img
-  --size-img-margin: var(--markdown-size-img-margin, #{var(--size-margin) auto});
+  --mk-size-img-margin: var(--markdown-size-img-margin, #{4rem 0 2rem});
 
   // code
-  --color-code-text: var(--markdown-color-code-text, hsl(0 0% 0%));
-  --color-code-bg: var(--markdown-color-code-bg, hsl(0 0% 95%));
+  --mk-color-code-text: var(--markdown-color-code-text, hsl(140 80% 42%));
+  --mk-color-code-bg: var(--markdown-color-code-bg, hsl(0 0% 24%));
 
   // blockquote
-  --color-blockquote-bg: var(--markdown-color-blockquote-bg, transparent);
-  --color-blockquote-outline: var(--markdown-color-blockquote-outline, hsl(0 0% 82%));
-  --color-blockquote-line: var(--markdown-color-blockquote-line, var(--color-key));
-  --size-blockquote-line: var(--markdown-size-blockquote-line, 6px);
-  --size-blockquote-padding: var(--markdown-size-blockquote-line, 1.25rem);
+  --mk-color-blockquote-bg: var(--markdown-color-blockquote-bg, transparent);
+  --mk-color-blockquote-outline: var(--markdown-color-blockquote-outline, hsl(0 0% 82%));
+  --mk-color-blockquote-line: var(--markdown-color-blockquote-line, var(--mk-color-key));
+  --mk-size-blockquote-line: var(--markdown-size-blockquote-line, 6px);
+  --mk-size-blockquote-padding: var(--markdown-size-blockquote-line, 1.25rem);
 
   // table
-  --color-table-line: var(--markdown-color-table-line, hsl(0 0% 82%));
-  --color-table-head-bg: var(--markdown-color-table-head-bg, hsl(0 0% 95%));
+  --mk-color-table-line: var(--markdown-color-table-line, hsl(0 0% 82%));
+  --mk-color-table-head-bg: var(--markdown-color-table-head-bg, hsl(0 0% 95%));
 
   // hr
-  --size-hr-margin: var(--markdown-size-hr-margin, #{5rem 0});
-  --size-hr-text: var(--markdown-size-hr-text, 12px);
-  --color-hr-text: var(--markdown-color-hr-text, --color-base);
-
-  font-size: var(--size-text);
-  line-height: var(--size-text-length);
-  color: var(--color-base);
+  --mk-size-hr-margin: var(--markdown-size-hr-margin, #{5rem 0});
+  --mk-size-hr-text: var(--markdown-size-hr-text, 12px);
+  --mk-color-hr-text: var(--markdown-color-hr-text, --mk-color-base);
 
   // dark mode
   &--dark {
     @include mixins.dark-mode() {
       // typography
-      --color-base: var(--markdown-color-base, hsl(0 0% 92%));
-      --color-title: var(--markdown-color-title, hsl(0, 0%, 100%));
-      --color-key: var(--markdown-color-key, hsl(142 76% 46%));
+      --mk-color-base: var(--markdown-color-base, hsl(0 0% 92%));
+      --mk-color-title: var(--markdown-color-title, hsl(0, 0%, 100%));
+      --mk-color-key: var(--markdown-color-key, hsl(142 76% 46%));
       // code
-      --color-code-text: var(--markdown-color-code-text, hsl(41 98% 60%));
-      --color-code-bg: var(--markdown-color-code-bg, hsl(0 0% 16%));
+      --mk-color-code-text: var(--markdown-color-code-text, hsl(45 100% 60%));
+      --mk-color-code-bg: var(--markdown-color-code-bg, hsl(0 0% 16%));
       // blockquote
-      --color-blockquote-outline: var(--markdown-color-blockquote-outline, hsl(0 0% 16%));
+      --mk-color-blockquote-outline: var(--markdown-color-blockquote-outline, hsl(0 0% 16%));
       // table
-      --color-table-line: var(--markdown-color-table-line, hsl(0 0% 20%));
-      --color-table-head-bg: var(--markdown-color-table-head-bg, hsl(0 0% 10%));
+      --mk-color-table-line: var(--markdown-color-table-line, hsl(0 0% 20%));
+      --mk-color-table-head-bg: var(--markdown-color-table-head-bg, hsl(0 0% 10%));
     }
   }
 
+  font-size: var(--mk-size-text);
+  line-height: var(--mk-size-text-length);
+  color: var(--mk-color-base);
+
   :where(h1, h2, h3, h4, h5, h6) {
-    scroll-margin-top: var(--size-header-top);
-    color: var(--color-title);
+    scroll-margin-top: var(--mk-hd-scroll-margin-top);
+    color: var(--mk-color-title);
     .anchor {
       display: none;
     }
+    @include mixins.responsive(tablet) {
+      position: relative;
+      .anchor {
+        display: block;
+        position: absolute;
+        left: -42px;
+        top: 50%;
+        opacity: 0;
+        transition: opacity 100ms ease-out;
+        transform: translateY(-50%);
+        padding: 10px;
+        box-sizing: border-box;
+        svg {
+          display: block;
+          width: 20px;
+          aspect-ratio: 1 / 1;
+          stroke-width: 1.75;
+        }
+      }
+      @include mixins.hover() {
+        .anchor {
+          opacity: 1;
+        }
+      }
+    }
   }
   :where(h1, h2, h3) {
-    margin: calc(var(--size-margin) * 1.5) 0 calc(var(--size-margin) * .75);
+    margin: calc(var(--mk-size-margin) * 2) 0 calc(var(--mk-size-margin) * 1.25);
     font-weight: 800;
     line-height: 1.15;
   }
   :where(h4, h5, h6) {
-    margin: var(--size-margin) 0 calc(var(--size-margin) * .5);
+    margin: calc(var(--mk-size-margin) * 1.25) 0 calc(var(--mk-size-margin) * .75);
     font-weight: 700;
     line-height: 1.25;
   }
@@ -83,22 +111,43 @@ $ratios: '2/1', '1/2', '6/4', '4/6', '4/3', '3/4', '16/9', '21/9';
   h5 { font-size: 1.25em; }
   h6 { font-size: 1em; }
   p {
-    margin: var(--size-margin) 0;
+    margin: var(--mk-size-margin) 0;
     @supports (text-wrap: balance) {
       text-wrap: balance;
     }
   }
   a {
-    color: var(--color-key);
+    color: var(--mk-color-key);
   }
   img {
+    --image-width: 100vw;
     display: block;
-    margin: var(--size-img-margin);
-    max-width: 100%;
+    width: 100vw;
+    max-width: var(--image-width);
+    position: relative;
+    left: 50%;
+    margin: var(--mk-size-img-margin);
+    transform: translateX(-50%);
+    transform-origin: 50% 50%;
+    @include mixins.responsive(desktop) {
+      --image-width: 1000px;
+      width: 90vw;
+    }
+    @include mixins.responsive(desktop-1280) {
+      @include mixins.retina() {
+        zoom: .75;
+      }
+    }
+    @include mixins.responsive(desktop-1440) {
+      --image-width: 1400px;
+    }
+    @media (max-width: 320px) {
+      --image-width: 100%;
+    }
   }
   hr {
     display: block;
-    margin: var(--size-hr-margin);
+    margin: var(--mk-size-hr-margin);
     padding: 0;
     border: none;
     &:after {
@@ -106,24 +155,24 @@ $ratios: '2/1', '1/2', '6/4', '4/6', '4/3', '3/4', '16/9', '21/9';
       display: block;
       text-align: center;
       font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
-      font-size: var(--size-hr-text);
+      font-size: var(--mk-size-hr-text);
       letter-spacing: .75em;
       line-height: 1.15;
       font-weight: 800;
-      color: var(--color-hr-text);
+      color: var(--mk-color-hr-text);
     }
   }
   table {
-    margin: var(--size-margin) 0;
+    margin: var(--mk-size-margin) 0;
     border-collapse: collapse;
     box-sizing: border-box;
     :where(th, td) {
       padding: .5rem 1rem;
-      border: 1px solid var(--color-table-line);
+      border: 1px solid var(--mk-color-table-line);
       box-sizing: border-box;
     }
     thead :where(th, td) {
-      background-color: var(--color-table-head-bg);
+      background-color: var(--mk-color-table-head-bg);
     }
     tbody td {
       word-break: keep-all;
@@ -134,27 +183,44 @@ $ratios: '2/1', '1/2', '6/4', '4/6', '4/3', '3/4', '16/9', '21/9';
     word-break: break-all;
   }
   code {
-    word-break: break-word;
-    color: var(--color-code-text);
+    padding: .2em .4em;
+    color: var(--mk-color-code-text);
+    font-family: 'Monaco', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+    font-size: 92%;
+    white-space: break-spaces;
+    font-weight: 600;
   }
   pre {
-    margin: var(--size-margin) 0;
-    padding: 1rem;
-    background: var(--color-code-bg);
+    margin: var(--mk-size-margin) 0;
+    padding: 24px;
+    background: var(--mk-color-code-bg);
     font-size: calc(1em - 1px);
     line-height: 1.5;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
-    border-radius: 2px;
+    border-radius: 4px;
+    box-shadow: 0 4px 36px hsl(0 0% 0% / 8%), 0 8px 24px hsl(0 0% 0% / 16%);
+    color-scheme: dark;
+    box-sizing: border-box;
     @include mixins.custom-scroll-style();
+    @include mixins.responsive(tablet) {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      transform-origin: 50% 50%;
+      width: calc(100vw - (var(--mk-size-side-padding) * 2));
+      max-width: 820px;
+    }
     > code {
       margin: 0;
       padding: 0;
       background: none;
       white-space: pre;
       border-radius: 0;
-      color: var(--color-base);
-      font-size: 1em;
+      color: hsl(0 0% 90%);
+      font-size: .875em;
+      font-weight: 400;
+      line-height: 1.68;
     }
   }
   input[type=checkbox] {
@@ -162,12 +228,12 @@ $ratios: '2/1', '1/2', '6/4', '4/6', '4/3', '3/4', '16/9', '21/9';
   }
   iframe {
     display: block;
-    margin: var(--size-img-margin);
+    margin: var(--mk-size-img-margin);
     max-width: 100%;
   }
   .iframe {
     position: relative;
-    margin: var(--size-img-margin);
+    margin: var(--mk-size-img-margin);
     aspect-ratio: 16 / 9;
     > iframe {
       width: 100%;
@@ -177,34 +243,40 @@ $ratios: '2/1', '1/2', '6/4', '4/6', '4/3', '3/4', '16/9', '21/9';
   embed {
     display: block;
     max-width: 100%;
-    margin: var(--size-img-margin);
+    margin: var(--mk-size-img-margin);
   }
   blockquote {
     position: relative;
-    margin: var(--size-margin) 0;
-    padding: var(--size-blockquote-padding) var(--size-blockquote-padding) var(--size-blockquote-padding) calc(var(--size-blockquote-padding) + var(--size-blockquote-line));
-    box-shadow: inset 0 0 0 1px var(--color-blockquote-outline);
+    margin: var(--mk-size-margin) 0;
+    padding: var(--mk-size-blockquote-padding) var(--mk-size-blockquote-padding) var(--mk-size-blockquote-padding) calc(var(--mk-size-blockquote-padding) + var(--mk-size-blockquote-line));
+    box-shadow: inset 0 0 0 1px var(--mk-color-blockquote-outline);
     box-sizing: border-box;
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
-    background-color: var(--color-blockquote-bg);
+    background-color: var(--mk-color-blockquote-bg);
     &:after {
       content: '';
       position: absolute;
       left: 0;
       top: 0;
       bottom: 0;
-      width: var(--size-blockquote-line);
-      background-color: var(--color-blockquote-line);
+      width: var(--mk-size-blockquote-line);
+      background-color: var(--mk-color-blockquote-line);
     }
     > * {
       margin: 1rem 0;
+      &:first-child {
+        margin-top: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 
   // ul
   :where(ul, ol) {
-    margin: var(--size-margin) 0;
+    margin: var(--mk-size-margin) 0;
     padding-left: 1.125rem;
     > li {
       margin: .2rem 0;
@@ -218,33 +290,46 @@ $ratios: '2/1', '1/2', '6/4', '4/6', '4/3', '3/4', '16/9', '21/9';
     margin-top: 0;
   }
 
-  > *:first-child {
+  // first and last elements
+  > *:first-child,
+  > *:first-child *:first-child {
     margin-top: 0;
   }
-  > *:last-child {
-    margin-bottom: 0;
-  }
-
-  // responsive
-  @include mixins.responsive(desktop-1280) {
-    @include mixins.retina() {
-      img {
-        zoom: .75;
-      }
-    }
+  > *:last-child,
+  > *:last-child *:last-child {
+    margin-top: 0;
   }
 }
 
 // grid
 .redgoose-body {
   .grid-item {
+    --grid-width: 100vw;
     --grid-item-columns: 1;
     --grid-item-gap: 10px;
     --grid-item-ratio: unset;
     display: grid;
     grid-template-columns: repeat(var(--grid-item-columns, 1), 1fr);
     grid-gap: var(--grid-item-gap);
-    margin: var(--size-img-margin);
+    position: relative;
+    left: 50%;
+    margin: var(--mk-size-img-margin);
+    width: 100vw;
+    max-width: var(--grid-width);
+    transform: translateX(-50%);
+    transform-origin: 50% 50%;
+    @include mixins.responsive(desktop) {
+      --grid-width: 1000px;
+      width: 90vw;
+    }
+    @include mixins.responsive(desktop-1440) {
+      --grid-width: 1400px;
+    }
+    @media (max-width: 320px) {
+      --grid-width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
     > p {
       position: relative;
       margin: 0;
@@ -252,6 +337,7 @@ $ratios: '2/1', '1/2', '6/4', '4/6', '4/3', '3/4', '16/9', '21/9';
       grid-column: var(--grid-column, auto);
       aspect-ratio: var(--grid-item-ratio, 1 / 1);
       > img {
+        position: static;
         margin: 0;
         width: 100%;
         height: 100%;
@@ -309,7 +395,7 @@ $ratios: '2/1', '1/2', '6/4', '4/6', '4/3', '3/4', '16/9', '21/9';
     }
   }
   .grid-group {
-    margin: var(--size-img-margin);
+    margin: var(--mk-size-img-margin);
     > .grid-item {
       margin-top: var(--grid-item-gap);
       margin-bottom: var(--grid-item-gap);

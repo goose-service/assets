@@ -14,6 +14,7 @@ case "$1" in
     ;;
 
   upgrade)
+    ./scripts/build.sh
     docker buildx build --platform=linux/amd64 -t $IMAGE_NAME .
     docker save $IMAGE_NAME | ssh -C goose@redgoose.me 'cd ~/docker/assets && docker-compose down && docker load && docker-compose up -d && cd ../service && ./cmd.sh service reload'
     ;;
