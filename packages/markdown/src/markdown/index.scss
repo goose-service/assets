@@ -12,6 +12,9 @@ $ratios: '2/1', '1/2', '6/4', '4/6', '4/3', '3/4', '16/9', '21/9';
 
   // margin
   --size-margin: var(--markdown-size-margin, 2rem);
+  --size-header-top: var(--markdown-header-top, 0);
+
+  // img
   --size-img-margin: var(--markdown-size-img-margin, #{var(--size-margin) auto});
 
   // code
@@ -57,7 +60,11 @@ $ratios: '2/1', '1/2', '6/4', '4/6', '4/3', '3/4', '16/9', '21/9';
   }
 
   :where(h1, h2, h3, h4, h5, h6) {
+    scroll-margin-top: var(--size-header-top);
     color: var(--color-title);
+    .anchor {
+      display: none;
+    }
   }
   :where(h1, h2, h3) {
     margin: calc(var(--size-margin) * 1.5) 0 calc(var(--size-margin) * .75);
@@ -84,14 +91,10 @@ $ratios: '2/1', '1/2', '6/4', '4/6', '4/3', '3/4', '16/9', '21/9';
   a {
     color: var(--color-key);
   }
-  :where(picture, img) {
+  img {
     display: block;
     margin: var(--size-img-margin);
     max-width: 100%;
-  }
-  :where(picture img) {
-    margin: 0 auto;
-    cursor: auto;
   }
   hr {
     display: block;
@@ -215,12 +218,13 @@ $ratios: '2/1', '1/2', '6/4', '4/6', '4/3', '3/4', '16/9', '21/9';
     margin-top: 0;
   }
 
-  *:first-child, > *:first-child {
+  > *:first-child {
     margin-top: 0;
   }
-  *:last-child, > *:last-child {
+  > *:last-child {
     margin-bottom: 0;
   }
+
   // responsive
   @include mixins.responsive(desktop-1280) {
     @include mixins.retina() {

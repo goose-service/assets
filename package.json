@@ -16,7 +16,8 @@
   "license": "MIT",
   "scripts": {
     "build": "./scripts/build.sh",
-    "demo": "bun run ./scripts/demo.js"
+    "demo": "bun run ./scripts/demo.js",
+    "docker": "./scripts/docker.sh"
   },
   "workspaces": [
     "packages/*"

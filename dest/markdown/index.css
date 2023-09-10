@@ -6,6 +6,7 @@
   --size-text: var(--markdown-size-text, 1rem);
   --size-text-length: var(--markdown-size-text-length, 1.68);
   --size-margin: var(--markdown-size-margin, 2rem);
+  --size-header-top: var(--markdown-header-top, 0);
   --size-img-margin: var(--markdown-size-img-margin, var(--size-margin) auto);
   --color-code-text: var(--markdown-color-code-text, hsl(0 0% 0%));
   --color-code-bg: var(--markdown-color-code-bg, hsl(0 0% 95%));
@@ -46,7 +47,11 @@ html[data-theme=dark] .redgoose-body--dark {
   }
 }
 .redgoose-body :where(h1, h2, h3, h4, h5, h6) {
+  scroll-margin-top: var(--size-header-top);
   color: var(--color-title);
+}
+.redgoose-body :where(h1, h2, h3, h4, h5, h6) .anchor {
+  display: none;
 }
 .redgoose-body :where(h1, h2, h3) {
   margin: calc(var(--size-margin) * 1.5) 0 calc(var(--size-margin) * 0.75);
@@ -91,14 +96,10 @@ html[data-theme=dark] .redgoose-body--dark {
 .redgoose-body a {
   color: var(--color-key);
 }
-.redgoose-body :where(picture, img) {
+.redgoose-body img {
   display: block;
   margin: var(--size-img-margin);
   max-width: 100%;
-}
-.redgoose-body :where(picture img) {
-  margin: 0 auto;
-  cursor: auto;
 }
 .redgoose-body hr {
   display: block;
@@ -245,10 +246,10 @@ html[data-theme=dark] .redgoose-body pre::-webkit-scrollbar-thumb:hover {
 .redgoose-body :is(h1, h2, h3, h4, h5, h6) + * {
   margin-top: 0;
 }
-.redgoose-body *:first-child, .redgoose-body > *:first-child {
+.redgoose-body > *:first-child {
   margin-top: 0;
 }
-.redgoose-body *:last-child, .redgoose-body > *:last-child {
+.redgoose-body > *:last-child {
   margin-bottom: 0;
 }
 @media (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2) {

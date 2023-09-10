@@ -20,7 +20,7 @@ case "$1" in
 
   *)
     echo "Usage: ${script} {build|upload|upgrade}" >&2
-    exit 3
+    exit 0
     ;;
 
 esac
