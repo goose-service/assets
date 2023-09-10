@@ -66,43 +66,67 @@ a {
       line-height: 1.15;
     }
   }
-  &__body {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0 24px;
-    margin: 20px 0 0;
-    figure {
-      margin: 0;
-      img {
-        display: block;
-        width: 100%;
-        aspect-ratio: 1 / 1;
-        object-fit: contain;
-        box-shadow: 0 0 0 1px hsla(0 0% 0% / 10%);
-      }
-      ul {
-        margin: 16px 0 0;
-        padding: 0 0 0 20px;
-        font-size: 12px;
-        word-break: break-word;
-        li + li {
-          margin-top: 4px;
-        }
-        em {
-          font-style: normal;
-        }
-      }
-    }
-  }
   @media (screen and max-width: 768px) {
     &__header {
       h1 {
         font-size: 24px;
       }
     }
-    &__body {
-      grid-template-columns: 1fr;
-      gap: 24px 24px;
+  }
+}
+
+.images-basic {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 24px;
+  margin: 20px 0 0;
+  figure {
+    margin: 0;
+    img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: contain;
+      box-shadow: 0 0 0 1px hsla(0 0% 0% / 10%);
     }
+    a {
+      display: block;
+    }
+    ul {
+      margin: 16px 0 0;
+      padding: 0 0 0 20px;
+      font-size: 13px;
+      word-break: break-word;
+      li + li {
+        margin-top: 4px;
+      }
+      em {
+        font-style: normal;
+      }
+    }
+  }
+  @media (screen and max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 24px 24px;
+  }
+}
+
+.images-small {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px 0 0;
+  a {
+    display: grid;
+    place-content: center;
+    width: 64px;
+    height: 64px;
+    box-shadow: 0 0 0 1px hsla(0 0% 0% / 10%);
+  }
+  img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
   }
 }
