@@ -122,7 +122,6 @@ $ratios: '2/1', '1/2', '6/4', '4/6', '4/3', '3/4', '16/9', '21/9';
   img {
     --image-width: 100vw;
     display: block;
-    width: 100vw;
     max-width: var(--image-width);
     position: relative;
     left: 50%;
@@ -131,7 +130,6 @@ $ratios: '2/1', '1/2', '6/4', '4/6', '4/3', '3/4', '16/9', '21/9';
     transform-origin: 50% 50%;
     @include mixins.responsive(desktop) {
       --image-width: 1000px;
-      width: 90vw;
     }
     @include mixins.responsive(desktop-1280) {
       @include mixins.retina() {

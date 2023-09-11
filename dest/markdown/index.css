@@ -127,7 +127,6 @@ html[data-theme=dark] .redgoose-body--dark {
 .redgoose-body img {
   --image-width: 100vw;
   display: block;
-  width: 100vw;
   max-width: var(--image-width);
   position: relative;
   left: 50%;
@@ -138,7 +137,6 @@ html[data-theme=dark] .redgoose-body--dark {
 @media (min-width: 1024px) {
   .redgoose-body img {
     --image-width: 1000px;
-    width: 90vw;
   }
 }
 @media (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2) {
