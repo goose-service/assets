@@ -70,6 +70,7 @@ a {
   left: 0;
   z-index: 10;
   backdrop-filter: blur(16px);
+  user-select: none;
   ul {
     display: flex;
     gap: 1px;
