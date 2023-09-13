@@ -15,6 +15,10 @@ vite build
 cd $DIR/packages/markdown
 vite build
 
+# build markdown
+cd $DIR/packages/components
+vite build
+
 # copy resource
 resource_files=( "robots.txt" "index.html" "style.css" )
 cd $DIR/resource

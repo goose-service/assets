@@ -1,0 +1,32 @@
+@mixin dark-mode($root: false) {
+  @if ($root) {
+    &[data-theme=dark] {
+      @content;
+    }
+    @media (prefers-color-scheme: dark) {
+      &:not([data-theme=light]) {
+        @content;
+      }
+    }
+  } @else {
+    &:has(:root[data-theme=dark]) {
+      @content;
+    }
+    @media (prefers-color-scheme: dark) {
+      &:has(:root:not([data-theme=light])) {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin sv-dark-mode() {
+  :global(:root[data-theme=dark]) & {
+    @content
+  }
+  @media (prefers-color-scheme: dark) {
+    :global(:root:not([data-theme=light])) & {
+      @content;
+    }
+  }
+}

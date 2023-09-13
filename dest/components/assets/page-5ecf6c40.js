@@ -1,0 +1,1 @@
+import{S as o,i as r,s as i,e as c,a as l,n as a,d as m}from"./index-0e48305e.js";function d(n){let e;return{c(){e=c("article"),e.innerHTML="<h1>dark-mode-image component</h1>"},m(t,s){l(t,e,s)},p:a,i:a,o:a,d(t){t&&m(e)}}}class u extends o{constructor(e){super(),r(this,e,null,d,i,{})}}export{u as default};
