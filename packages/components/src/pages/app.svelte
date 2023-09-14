@@ -11,24 +11,26 @@
     <p>@redgoose/images :: 서비스 컴포넌트 프리뷰 영역</p>
   </div>
   <nav class="header__nav">
-    <button
-      type="button"
-      disabled={$theme === 'system'}
-      on:click={() => { $theme = 'system' }}>
-      System
-    </button>
-    <button
-      type="button"
-      disabled={$theme === 'light'}
-      on:click={() => { $theme = 'light' }}>
-      Light
-    </button>
-    <button
-      type="button"
-      disabled={$theme === 'dark'}
-      on:click={() => { $theme = 'dark' }}>
-      Dark
-    </button>
+    <p class="theme-controller">
+      <button
+        type="button"
+        disabled={$theme === 'system'}
+        on:click={() => { $theme = 'system' }}>
+        System
+      </button>
+      <button
+        type="button"
+        disabled={$theme === 'light'}
+        on:click={() => { $theme = 'light' }}>
+        Light
+      </button>
+      <button
+        type="button"
+        disabled={$theme === 'dark'}
+        on:click={() => { $theme = 'dark' }}>
+        Dark
+      </button>
+    </p>
   </nav>
 </header>
 <div class="container">

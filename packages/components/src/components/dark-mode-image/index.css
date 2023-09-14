@@ -1,22 +1,27 @@
 .dark-mode-image {
+  --display-img-light: block;
+  --display-img-dark: none;
   margin: 0;
-  padding: 30px;
-  /*background: red;*/
-  border: 1px solid red;
+  box-sizing: border-box;
   & > img {
-    display: contents;
     max-width: 100%;
-    /*&:where([data-theme=src-light], [data-theme=src-dark]) {*/
-    /*  display: none;*/
-    /*}*/
-    /*&[data-theme=src]:has(html[data-theme=system]) {*/
-    /*  display: block;*/
-    /*}*/
+    box-sizing: border-box;
+    &[data-type=light] {
+      display: var(--display-img-light);
+    }
+    &[data-type=dark] {
+      display: var(--display-img-dark);
+    }
   }
-}
+  &[data-theme=dark] {
+    --display-img-light: none;
+    --display-img-dark: block;
+  }
 
-@media (prefers-color-scheme: dark) {
-  .dark-mode-image {
-    background: lime;
+  @media (prefers-color-scheme: dark) {
+    &:not([data-theme=light]) {
+      --display-img-light: none;
+      --display-img-dark: block;
+    }
   }
 }

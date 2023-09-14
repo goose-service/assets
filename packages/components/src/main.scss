@@ -1,4 +1,5 @@
 @use './assets/mixins';
+@import url('https://assets.redgoose.me/markdown/index.css');
 
 :root {
   --font-base: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
@@ -6,12 +7,13 @@
   --size-side-padding: 24px;
   --color-bg: hsl(0 0% 98%);
   --color-base: hsl(0 0% 6.5%);
-  --color-key-hsl: 261, 82%, 62%;
+  --color-key-hsl: 261 82% 62%;
   --color-key: hsl(var(--color-key-hsl));
   @include mixins.dark-mode(true) {
     color-scheme: dark;
     --color-bg: hsl(0 0% 8%);
     --color-base: hsl(0 0% 98%);
+    --color-key-hsl: 160 94% 40%;
   }
 }
 

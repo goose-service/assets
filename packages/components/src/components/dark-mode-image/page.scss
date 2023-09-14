@@ -1,3 +1,140 @@
-.component-page {
-  //border: 1px solid #000;
+@use '../../assets/mixins';
+
+.component-page {}
+
+.header {
+  margin: 24px 0;
+  h1 {
+    margin: 0;
+    font-size: 24px;
+    line-height: 1.05;
+    letter-spacing: -.5px;
+  }
+  p {
+    margin: 4px 0 0;
+    font-size: 13px;
+    line-height: 1.15;
+  }
+}
+
+.form {
+  margin: 24px 0;
+  padding: 16px;
+  background: hsl(0 0% 90%);
+  border-radius: 2px;
+  fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+    display: grid;
+    gap: 16px 0;
+    legend {
+      display: none;
+    }
+  }
+  dl {
+    display: grid;
+    gap: 6px 0;
+    margin: 0;
+    dt {
+      font-size: 14px;
+      font-weight: 600;
+    }
+    dd {
+      margin: 0;
+      input {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        height: 32px;
+        padding: 0 10px;
+        font-size: 13px;
+        border-radius: 0;
+        border: none;
+        &:focus {
+          outline: 2px solid var(--color-key);
+        }
+      }
+    }
+  }
+  nav {
+    margin: 16px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 0 1px;
+    button {
+      flex: 1;
+      display: block;
+      margin: 0;
+      padding: 8px 16px;
+      border: none;
+      color: hsl(0 0% 92%);
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      &:active {
+        opacity: .5;
+      }
+      &:not([type=submit]) {
+        background: hsl(0 0% 25%);
+      }
+      &[type=submit] {
+        background: var(--color-key);
+      }
+    }
+  }
+  @media (min-width: 768px) {
+    padding: 24px;
+    fieldset {
+      gap: 10px 0;
+    }
+    dl {
+      grid-template-columns: 85px 1fr;
+      align-items: center;
+      gap: 0;
+      dd {
+        input {}
+      }
+    }
+    nav {
+      gap: 0 4px;
+      button {
+        flex: none;
+        padding: 10px 24px;
+      }
+    }
+  }
+  @include mixins.sv-dark-mode() {
+    background: hsl(0 0% 12%);
+    dl {
+      dd {
+        input {
+          background: hsl(0 0% 4%);
+        }
+      }
+    }
+    nav {
+      button:not([type=submit]) {
+        background: hsl(0 0% 32%);
+      }
+    }
+  }
+}
+
+.preview {
+  margin: 24px 0;
+  padding: 24px;
+  border: 1px dashed hsl(0 0% 75%);
+  border-radius: 4px;
+  dark-mode-image {
+    display: block;
+  }
+  @include mixins.sv-dark-mode() {
+    border-color: hsl(0 0% 25%);
+  }
+}
+
+.guide-content {
+  --markdown-size-margin: 1rem;
+  margin: 42px 0 0;
 }
