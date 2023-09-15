@@ -1,8 +1,10 @@
 import fs from 'fs'
 import { build } from 'esbuild'
+import { umdWrapper } from 'esbuild-plugin-umd-wrapper'
 import { ESPluginTextCss } from './libs/esbuild.js'
 
 const pathDest = '../../dest/components'
+const completeObjectName = 'Goose'
 
 function getDirectoryPath()
 {
@@ -13,12 +15,9 @@ function getDirectoryPath()
     const name = file.name
     const path = `${file.path}/${name}`
     if (!fs.existsSync(`${path}/index.js`)) return
-    let meta = fs.readFileSync(`${path}/meta.json`, 'utf8')
-    meta = JSON.parse(meta)
     result.push({
       name,
       path: `${path}/index.js`,
-      className: meta.className,
     })
   })
   return result
@@ -28,22 +27,32 @@ async function compile({ name, path })
 {
   await build({
     platform: 'browser',
+    outfile: `${pathDest}/${name}/index.js`,
     bundle: true,
     minify: true,
     format: 'esm',
     entryPoints: [ path ],
-    outfile: `${pathDest}/${name}.js`,
     plugins: [ ESPluginTextCss ],
   })
   return true
 }
 
-function createExports(components)
+function createComplete(components)
 {
-  const str = components.map(o => {
-    return `export { ${o.className} as default } from './${o.name}.js'`
-  }).join('\n')
-  fs.writeFileSync(`${pathDest}/exports.js`, str, {})
+  build({
+    platform: 'browser',
+    bundle: true,
+    minify: true,
+    format: 'umd',
+    entryPoints: [ 'src/components/index.js' ],
+    outfile: `${pathDest}/index.js`,
+    plugins: [
+      ESPluginTextCss,
+      umdWrapper({
+        libraryName: completeObjectName,
+      }),
+    ],
+  }).then()
 }
 
 function compileComponents()
@@ -58,7 +67,7 @@ function compileComponents()
       // build component classes
       Promise.all(components.map(compile)).then()
       // create exports.js file
-      createExports(components)
+      createComplete(components)
     },
   }
 }

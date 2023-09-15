@@ -6,9 +6,9 @@
   src-dark="img-dark.jpg"
   alt="message"/>
 
-<script type="module">
-import DarkModeImage from './dark-mode-image.js'
-customElements.define('dark-mode-image', DarkModeImage)
+<script src="https://assets.redgoose.me/components/index.js"></script>
+<script>
+customElements.define('dark-mode-image', Goose.DarkModeImage)
 </script>
 ```
 
