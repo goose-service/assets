@@ -37,22 +37,34 @@ async function compile({ name, path })
   return true
 }
 
-function createComplete(components)
+async function createComplete(components)
 {
-  build({
+  const baseOptions = {
     platform: 'browser',
     bundle: true,
     minify: true,
+    plugins: [ ESPluginTextCss ],
+  }
+  // build umd
+  await build({
+    ...baseOptions,
     format: 'umd',
     entryPoints: [ 'src/components/index.js' ],
     outfile: `${pathDest}/index.js`,
     plugins: [
-      ESPluginTextCss,
+      ...baseOptions.plugins,
       umdWrapper({
         libraryName: completeObjectName,
       }),
     ],
-  }).then()
+  })
+  // build custom elements
+  await build({
+    ...baseOptions,
+    format: 'cjs',
+    entryPoints: [ 'src/components/custom-elements.js' ],
+    outfile: `${pathDest}/custom-elements.js`,
+  })
 }
 
 function compileComponents()
@@ -67,7 +79,7 @@ function compileComponents()
       // build component classes
       Promise.all(components.map(compile)).then()
       // create exports.js file
-      createComplete(components)
+      createComplete(components).then()
     },
   }
 }
