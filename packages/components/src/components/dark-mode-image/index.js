@@ -123,7 +123,7 @@ class DarkModeImage extends HTMLElement {
    */
   #updateTheme(theme)
   {
-    this.root.dataset.theme = theme
+    this.root.dataset.theme = theme || ''
   }
 
 }

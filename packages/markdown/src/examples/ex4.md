@@ -5,7 +5,7 @@
 
 <figure class="grid-item" data-mobile="2">
 <p><img src="https://goose.redgoose.me/data/upload/original/202306/TRON_Lightcycle-Run_stillion-00165.webp" alt="TRON_Lightcycle-Run_stillion-00165.webp"/></p>
-<p><img src="https://goose.redgoose.me/data/upload/original/202305/AI_A_close-up_of_a_dragon_sculpture_made_of_jadeJadeJellyEx_a49035c7-2d53-4cd0-a9a3-5f4b99da8477.png" alt=""/></p>
+<p><goose-dark-mode-image src-light="https://goose.redgoose.me/data/upload/original/202106/slideshow-001-light.png" src-dark="https://goose.redgoose.me/data/upload/original/202106/slideshow-001-dark.png" alt="Slideshow"/></p>
 </figure>
 
 

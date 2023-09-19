@@ -1,10 +1,22 @@
 .dark-mode-image {
   --display-img-light: block;
   --display-img-dark: none;
+  display: inline;
   margin: 0;
   box-sizing: border-box;
   & > img {
-    max-width: 100%;
+    margin: var(--goose-dmi-margin, unset);
+    width: var(--goose-dmi-width, unset);
+    height: var(--goose-dmi-height, unset);
+    position: var(--goose-dmi-position, unset);
+    left: var(--goose-dmi-left, unset);
+    transform: var(--goose-dmi-transform, unset);
+    max-width: var(--goose-dmi-max-width, 100%);
+    max-height: var(--goose-dmi-max-height, unset);
+    object-fit: var(--goose-dmi-object-fit, unset);
+    transform-origin: var(--goose-dmi-transform-origin, unset);
+    zoom: var(--goose-dmi-zoom, unset);
+    background: var(--goose-dmi-background, unset);
     box-sizing: border-box;
     &[data-type=light] {
       display: var(--display-img-light);
@@ -17,7 +29,6 @@
     --display-img-light: none;
     --display-img-dark: block;
   }
-
   @media (prefers-color-scheme: dark) {
     &:not([data-theme=light]) {
       --display-img-light: none;

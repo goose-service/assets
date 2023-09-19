@@ -515,11 +515,10 @@ View 영역의 항목을 그대로 붙여넣거나 HTML 내보내기 등으로 �
 * [John gruber 마크다운 번역](http://nolboo.github.io/blog/2013/09/07/john-gruber-markdown/)
 * [깃허브 취향의 마크다운 번역](http://nolboo.github.io/blog/2014/03/25/github-flavored-markdown/)
 * [허니몬의 마크다운 작성법](http://www.slideshare.net/ihoneymon/ss-40575068)
-`,we=`<picture>
-<source srcset="https://goose.redgoose.me/data/upload/original/202106/slideshow-001-dark.png" media="(prefers-color-scheme: dark)"/>
-<source srcset="https://goose.redgoose.me/data/upload/original/202106/slideshow-001-light.png" media="(prefers-color-scheme: light)"/>
-<img src="https://goose.redgoose.me/data/upload/original/202106/slideshow-001-light.png" alt=""/>
-</picture>
+`,we=`<goose-dark-mode-image
+  src-light="https://goose.redgoose.me/data/upload/original/202106/slideshow-001-light.png"
+  src-dark="https://goose.redgoose.me/data/upload/original/202106/slideshow-001-dark.png"
+  alt="Slideshow"/>
 
 - date: 2019-02-24
 - position: design, front and develop
@@ -643,7 +642,7 @@ API 연동에 대해서는 기술적으로 그다지 어렵게 만들지는 않�
 
 <figure class="grid-item" data-mobile="2">
 <p><img src="https://goose.redgoose.me/data/upload/original/202306/TRON_Lightcycle-Run_stillion-00165.webp" alt="TRON_Lightcycle-Run_stillion-00165.webp"/></p>
-<p><img src="https://goose.redgoose.me/data/upload/original/202305/AI_A_close-up_of_a_dragon_sculpture_made_of_jadeJadeJellyEx_a49035c7-2d53-4cd0-a9a3-5f4b99da8477.png" alt=""/></p>
+<p><goose-dark-mode-image src-light="https://goose.redgoose.me/data/upload/original/202106/slideshow-001-light.png" src-dark="https://goose.redgoose.me/data/upload/original/202106/slideshow-001-dark.png" alt="Slideshow"/></p>
 </figure>
 
 
