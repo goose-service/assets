@@ -1,4 +1,8 @@
 
+![image](https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg)
+
+일반 이미지
+
 ## grid-item solo
 
 단독으로 사용할때의 예제

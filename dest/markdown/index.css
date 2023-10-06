@@ -83,13 +83,13 @@ html[data-theme=dark] .redgoose-body--dark {
   }
 }
 .redgoose-body :where(h1, h2, h3) {
-  margin: calc(var(--mk-size-margin) * 2) 0 calc(var(--mk-size-margin) * 1.25);
+  margin: calc(var(--mk-size-margin) * 2) 0 calc(var(--mk-size-margin) * 1);
   font-weight: 800;
   line-height: 1.15;
 }
 .redgoose-body :where(h4, h5, h6) {
   margin: calc(var(--mk-size-margin) * 1.25) 0 calc(var(--mk-size-margin) * 0.75);
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.25;
 }
 .redgoose-body h1 {
@@ -210,16 +210,6 @@ html[data-theme=dark] .redgoose-body pre::-webkit-scrollbar-thumb:hover {
     background: rgba(255, 255, 255, 0.3);
   }
 }
-@media (min-width: 768px) {
-  .redgoose-body pre {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    transform-origin: 50% 50%;
-    width: calc(100vw - var(--mk-size-side-padding) * 2);
-    max-width: 900px;
-  }
-}
 .redgoose-body pre > code {
   margin: 0;
   padding: 0;
@@ -230,6 +220,16 @@ html[data-theme=dark] .redgoose-body pre::-webkit-scrollbar-thumb:hover {
   font-size: 0.875em;
   font-weight: 400;
   line-height: 1.68;
+}
+@media (min-width: 768px) {
+  .redgoose-body > pre {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    transform-origin: 50% 50%;
+    width: calc(100vw - var(--mk-size-side-padding) * 2);
+    max-width: 900px;
+  }
 }
 .redgoose-body input[type=checkbox] {
   margin-right: 3px;
@@ -354,6 +354,7 @@ html[data-theme=dark] .redgoose-body pre::-webkit-scrollbar-thumb:hover {
   display: grid;
   grid-template-columns: repeat(var(--grid-item-columns, 1), 1fr);
   grid-gap: var(--grid-item-gap);
+  width: 100vw;
 }
 .redgoose-body .grid-item > p {
   position: relative;

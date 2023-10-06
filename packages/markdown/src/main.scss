@@ -7,6 +7,7 @@
   --color-base: hsl(var(--color-base-hsl));
   --font-base: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   --body-padding-side: 64px;
+  --size-content: 900px;
   color-scheme: light;
   @media screen and (max-width: 768px) {
     --body-padding-side: 24px;
@@ -28,16 +29,17 @@ body, input, button {
   color: var(--color-base);
 }
 main {
-  margin: 0 auto;
-  max-width: 900px;
+  padding: 0;
 }
 a {
   color: #111;
 }
 
 .header {
+  margin: 0 auto;
   padding: 24px 0 16px;
   border-bottom: 1px dashed #ccc;
+  max-width: var(--size-content);
   h1 {
     margin: 0;
     font-size: 36px;
@@ -60,8 +62,6 @@ a {
 }
 
 .head-navigation {
-  display: flex;
-  justify-content: space-between;
   margin: 0 calc(var(--body-padding-side) * -1);
   padding: 16px var(--body-padding-side);
   background: hsla(var(--color-bg-hsl) / 85%);
@@ -71,6 +71,13 @@ a {
   z-index: 10;
   backdrop-filter: blur(16px);
   user-select: none;
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
   ul {
     display: flex;
     gap: 1px;
@@ -106,10 +113,12 @@ a {
 }
 
 .source-code {
-  margin: 24px 0 0;
+  margin: 24px auto 0;
   padding: 16px 20px;
+  max-width: var(--size-content);
   background: hsl(0 0% 8%);
   border-radius: 2px;
+  box-sizing: border-box;
   h1 {
     margin: 0;
     color: hsl(0 0% 100%);
@@ -138,7 +147,8 @@ a {
 }
 
 .container {
-  margin: 0;
+  max-width: var(--size-content);
+  margin: 0 auto;
   padding: 48px 0 100px;
   @media screen and (max-width: 768px) {
     padding-top: 24px;
