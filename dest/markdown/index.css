@@ -344,7 +344,7 @@ html[data-theme=dark] .redgoose-body pre::-webkit-scrollbar-thumb:hover {
 }
 .redgoose-body > *:last-child,
 .redgoose-body > *:last-child *:last-child {
-  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .redgoose-body .grid-item {
