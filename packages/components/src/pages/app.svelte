@@ -40,7 +40,9 @@
 <script>
 import { onMount, onDestroy } from 'svelte'
 import { page, theme } from '../store/base.js'
+
 let activeComponent
+let htmlObserver
 
 $: changePage($page || '').then()
 $: changeTheme($theme || '')
@@ -72,9 +74,21 @@ function onPopstate(e)
 
 onMount(() => {
   window.addEventListener('popstate', onPopstate)
+  const html = document.querySelector('html')
+  htmlObserver = new MutationObserver(mutations => {
+    mutations.forEach(record => {
+      const attrName = record.attributeName
+      if (record.type !== 'attributes' || attrName !== 'data-theme') return
+      let value = record.target.getAttribute(attrName)
+      if (!['light', 'dark'].includes(value)) value = 'system'
+      $theme = value
+    })
+  })
+  htmlObserver.observe(html, { attributes: true })
 })
 onDestroy(() => {
   window.removeEventListener('popstate', onPopstate)
+  htmlObserver.disconnect()
 })
 </script>
 

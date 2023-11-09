@@ -30,6 +30,11 @@ const contents = [
     key: 'dark-mode-image',
     title: '다크모드 이미지',
     description: '라이드모드와 다크모드를 변경할때 표시되는 이미지가 변할때 사용한다.',
+  },
+  {
+    key: 'dark-mode-switch',
+    title: '다크모드 변경 스위치',
+    description: '라이드모드와 다크모드 UI 컴포넌트',
   }
 ]
 

@@ -1,0 +1,105 @@
+.dark-mode-switch {
+  position: relative;
+  display: block;
+  width: var(--dark-mode-switch-width, 48px);
+  height: var(--dark-demo-switch-height, 24px);
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  border-radius: calc(var(--dark-demo-switch-height, 24px) * .5);
+  background: none;
+  border: none;
+  transition: background-color 200ms ease-out, box-shadow 200ms ease-out;
+  overflow: hidden;
+  & i {
+    --size: calc(var(--dark-demo-switch-height, 24px) - (var(--dark-mode-switch-padding, 2px) * 2));
+    --x: var(--dark-mode-switch-padding, 2px);
+    --y: var(--dark-mode-switch-padding, 2px);
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: grid;
+    place-content: center;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    transform: translate(var(--x), var(--y));
+    transition: transform 240ms ease-out, background-color 200ms ease-out, box-shadow 200ms ease-out;
+  }
+  & svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -6px 0 0 -6px;
+    display: block;
+    transition: transform 600ms ease-out;
+    transform: rotateZ(0deg);
+    transform-origin: 50% 50%;
+  }
+  & svg.sun {
+    color: hsl(10, 92%, 60%);
+  }
+  & svg.moon {
+    color: hsl(190, 100%, 72%);
+  }
+  &:focus-visible {
+    outline-style: solid;
+    outline-width: 2px;
+    transition: outline-color 200ms ease-out;
+  }
+  &.light {
+    background: hsla(0 0% 100%);
+    box-shadow: inset 0 2px 16px hsla(0 0% 0% / 15%), inset 0 0 0 .5px hsla(0 0% 0% / 5%);
+    & i {
+      background: hsla(0 0% 100%);
+      box-shadow: 0 0 6px hsla(0 0% 0% / 20%);
+    }
+    & svg.sun {
+      opacity: 1;
+    }
+    & svg.moon {
+      opacity: 0;
+    }
+    &:active {
+      & i {
+        --x: calc(var(--dark-mode-switch-padding, 2px) + 4px);
+      }
+      & svg {
+        transform: rotateZ(40deg);
+      }
+    }
+    &:focus-visible {
+      outline-color: var(--dark-mode-switch-focus, hsl(350 70% 41%));
+    }
+  }
+  &.dark {
+    background: hsla(0 0% 25%);
+    box-shadow: inset 0 2px 16px hsla(0 0% 0% / 50%), inset 0 0 0 .5px hsla(0 0% 100% / 10%);
+    & i {
+      --x: calc(var(--dark-mode-switch-width, 48px) - var(--size) - var(--y));
+      background: hsla(0 0% 4%);
+      box-shadow: 0 0 6px hsla(0 0% 0% / 40%);
+    }
+    & svg {
+      transform: rotateZ(360deg);
+    }
+    & svg.sun {
+      opacity: 0;
+    }
+    & svg.moon {
+      opacity: 1;
+    }
+    &:active {
+      & i {
+        --x: calc(var(--dark-mode-switch-width, 48px) - var(--size) - var(--y) - 4px);
+      }
+      & svg {
+        transform: rotateZ(320deg);
+      }
+    }
+    &:focus-visible {
+      outline-color: var(--dark-mode-switch-focus, hsl(142 76% 46%));
+    }
+  }
+}

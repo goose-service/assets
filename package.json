@@ -1,6 +1,6 @@
 {
   "name": "@redgoose/assets",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "author": "redgoose <scripter@me.com>",
   "repository": {
     "type": "git",
@@ -15,6 +15,7 @@
   ],
   "license": "MIT",
   "scripts": {
+    "clean": "./scripts/clean.sh",
     "build": "./scripts/build.sh",
     "demo": "bun run ./scripts/demo.js",
     "docker": "./scripts/docker.sh"
@@ -23,6 +24,6 @@
     "packages/*"
   ],
   "dependencies": {
-    "hono": "^3.5.8"
+    "hono": "^3.9.2"
   }
 }

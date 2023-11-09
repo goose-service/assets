@@ -10,14 +10,14 @@
     "last 2 versions"
   ],
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^2.4.5",
-    "esbuild": "^0.19.2",
-    "esbuild-css-modules-plugin": "^3.0.1",
+    "@sveltejs/vite-plugin-svelte": "^2.4.6",
+    "esbuild": "^0.19.5",
+    "esbuild-css-modules-plugin": "^3.0.3",
     "esbuild-plugin-umd-wrapper": "^1.0.7",
-    "marked": "^9.0.0",
-    "sass": "^1.66.1",
-    "svelte": "^4.2.0",
+    "marked": "^9.1.5",
+    "sass": "^1.69.5",
+    "svelte": "^4.2.2",
     "svelte-preprocess": "^5.0.4",
-    "vite": "^4.4.9"
+    "vite": "^4.5.0"
   }
 }

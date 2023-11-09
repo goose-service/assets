@@ -60,7 +60,7 @@
 
 <script>
 import { onMount, onDestroy } from 'svelte'
-import { marked, Renderer } from 'marked'
+import { marked } from 'marked'
 import DarkModeImage from './index.js'
 import readme from './README.md?raw'
 

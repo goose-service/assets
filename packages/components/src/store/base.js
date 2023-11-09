@@ -20,7 +20,7 @@ function createPage()
 function createTheme()
 {
   const getTheme = storage.get()?.theme || ''
-  const { subscribe, set, update } = writable(getTheme)
+  const { subscribe, set, update } = writable(getTheme || 'system')
   return {
     subscribe,
     set: (newValue) => {

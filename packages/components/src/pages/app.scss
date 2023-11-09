@@ -9,7 +9,7 @@
 
 .header {
   @extend .content-wrap;
-  padding: 24px 0 12px;
+  padding: 16px 0;
   border-bottom: 1px dashed hsl(0 0% 75%);
   &__body {
     flex: 1;
@@ -30,7 +30,7 @@
       }
     }
     p {
-      margin: 4px 0 0;
+      margin: 2px 0 0;
       font-size: 13px;
       line-height: 1.15;
     }
