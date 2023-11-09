@@ -5,19 +5,19 @@ DIR="$( realpath `dirname $0` )/.."
 
 # build fonts
 cd $DIR/packages/fonts
-vite build
+${DIR}/node_modules/.bin/vite build
 
 # build images
 cd $DIR/packages/images
-vite build
+${DIR}/node_modules/.bin/vite build
 
 # build markdown
 cd $DIR/packages/markdown
-vite build
+${DIR}/node_modules/.bin/vite build
 
 # build markdown
 cd $DIR/packages/components
-vite build
+${DIR}/node_modules/.bin/vite build
 
 # copy resource
 resource_files=( "robots.txt" "index.html" "style.css" )
