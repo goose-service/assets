@@ -12,6 +12,7 @@
   border: none;
   transition: background-color 200ms ease-out, box-shadow 200ms ease-out;
   overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
   & i {
     --size: calc(var(--dark-demo-switch-height, 24px) - (var(--dark-mode-switch-padding, 2px) * 2));
     --x: var(--dark-mode-switch-padding, 2px);
