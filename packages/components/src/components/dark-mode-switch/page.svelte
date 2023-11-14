@@ -4,7 +4,8 @@
     <p>다크모드를 변경하는 스위치 UI 컴포넌트</p>
   </header>
   <div class="preview center">
-    <dark-mode-switch theme={theme} on:change={onChangeTheme}/>
+    <dark-mode-switch theme={theme} class="switch1" on:change={onChangeTheme}/>
+    <dark-mode-switch theme={theme} class="switch2" on:change={onChangeTheme}/>
   </div>
   <div
     aria-hidden="true"
