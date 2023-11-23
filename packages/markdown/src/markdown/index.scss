@@ -359,7 +359,6 @@ $ratios: '2/1', '1/2', '6/4', '4/6', '4/3', '3/4', '16/9', '21/9';
     }
     @for $i from 1 through 6 {
       &[data-mobile="#{$i}"] { --grid-item-columns: #{$i}; }
-      > p[col="#{$i}"] { --grid-column: span #{$i}; }
     }
     @each $ratio in $ratios {
       &[data-ratio="#{$ratio}"] { --grid-item-ratio: #{$ratio}; }
@@ -367,7 +366,6 @@ $ratios: '2/1', '1/2', '6/4', '4/6', '4/3', '3/4', '16/9', '21/9';
     @include mixins.responsive(tablet) {
       @for $i from 1 through 6 {
         &[data-tablet="#{$i}"] { --grid-item-columns: #{$i}; }
-        > p[col-tablet="#{$i}"] { --grid-column: span #{$i}; }
       }
       @each $ratio in $ratios {
         &[data-ratio-tablet="#{$ratio}"] { --grid-item-ratio: #{$ratio}; }
@@ -376,7 +374,6 @@ $ratios: '2/1', '1/2', '6/4', '4/6', '4/3', '3/4', '16/9', '21/9';
     @include mixins.responsive(desktop) {
       @for $i from 1 through 6 {
         &[data-desktop="#{$i}"] { --grid-item-columns: #{$i}; }
-        > p[col-desktop="#{$i}"] { --grid-column: span #{$i}; }
       }
       @each $ratio in $ratios {
         &[data-ratio-desktop="#{$ratio}"] { --grid-item-ratio: #{$ratio}; }
@@ -385,7 +382,6 @@ $ratios: '2/1', '1/2', '6/4', '4/6', '4/3', '3/4', '16/9', '21/9';
     @include mixins.responsive(desktop-1440) {
       @for $i from 1 through 6 {
         &[data-desktop-large="#{$i}"] { --grid-item-columns: #{$i}; }
-        > p[col-desktop-large="#{$i}"] { --grid-column: span #{$i}; }
       }
       @each $ratio in $ratios {
         &[data-ratio-desktop-large="#{$ratio}"] { --grid-item-ratio: #{$ratio}; }
