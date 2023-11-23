@@ -270,7 +270,7 @@ $ratios: '2/1', '1/2', '6/4', '4/6', '4/3', '3/4', '16/9', '21/9';
     max-width: var(--image-width);
     transform: translateX(-50%);
     transform-origin: 50% 50%;
-    @include mixins.responsive(desktop-1280) {
+    @include mixins.responsive(desktop-1440) {
       @include mixins.retina() {
         zoom: .75;
       }
@@ -283,7 +283,7 @@ $ratios: '2/1', '1/2', '6/4', '4/6', '4/3', '3/4', '16/9', '21/9';
     --goose-dmi-transform: translateX(-50%);
     --goose-dmi-transform-origin: 50% 50%;
     --goose-dmi-max-width: var(--image-width);
-    @include mixins.responsive(desktop-1280) {
+    @include mixins.responsive(desktop-1440) {
       @include mixins.retina() {
         --goose-dmi-zoom: .75;
       }
