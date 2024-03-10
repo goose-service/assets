@@ -112,9 +112,6 @@ $ratios: '2/1', '1/2', '6/4', '4/6', '4/3', '3/4', '16/9', '21/9';
   h6 { font-size: 1em; }
   p {
     margin: var(--mk-size-margin) 0;
-    @supports (text-wrap: balance) {
-      text-wrap: balance;
-    }
   }
   a {
     color: var(--mk-color-key);
