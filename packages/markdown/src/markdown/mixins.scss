@@ -1,3 +1,5 @@
+// MIXINS
+
 // responsive
 @mixin responsive($range)
 {
@@ -86,4 +88,13 @@
       @content;
     }
   }
+}
+
+
+// FUNCTIONS
+
+// color-mix with alpha
+@function mix-alpha($color, $alpha: 100%)
+{
+  @return color-mix(in hsl, $color $alpha, transparent);
 }

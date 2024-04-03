@@ -2,18 +2,15 @@
   "name": "@redgoose/fonts",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build"
+    "dev": "bunx --bun vite",
+    "build": "bunx --bun vite build"
   },
   "browserslist": [
     "> 1%",
     "last 2 versions"
   ],
-  "engines": {
-    "node": ">=20"
-  },
   "devDependencies": {
-    "sass": "^1.66.1",
-    "vite": "^4.4.9"
+    "sass": "^1.72.0",
+    "vite": "^5.2.7"
   }
 }

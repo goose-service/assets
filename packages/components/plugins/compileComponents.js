@@ -1,4 +1,4 @@
-import fs from 'fs'
+import fs from 'bun:fs'
 import { build } from 'esbuild'
 import { umdWrapper } from 'esbuild-plugin-umd-wrapper'
 import { ESPluginTextCss } from './libs/esbuild.js'

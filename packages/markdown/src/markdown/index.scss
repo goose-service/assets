@@ -247,6 +247,11 @@ $ratios: '2/1', '1/2', '6/4', '4/6', '4/3', '3/4', '16/9', '21/9';
       }
     }
   }
+  video {
+    display: block;
+    margin: var(--mk-size-img-margin);
+    max-width: 100%;
+  }
 
   // image
   --image-width: 100vw;

@@ -1,7 +1,7 @@
 import { defineConfig, loadEnv } from 'vite'
 
 const config = defineConfig(({ mode }) => {
-  const path = process.cwd()
+  const path = import.meta.dir
   const env = loadEnv(mode, path)
   return {
     base: './',

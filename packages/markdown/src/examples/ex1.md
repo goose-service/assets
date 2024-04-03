@@ -157,6 +157,7 @@ $$I = \int \rho R^{2} dV$$
 And note that you can backslash-escape any punctuation characters
 which you wish to be displayed literally, ex.: `foo, bar`, etc.
 
+
 ## iframe example
 
 비디오 집어넣는 요소 테스트
@@ -164,3 +165,8 @@ which you wish to be displayed literally, ex.: `foo, bar`, etc.
 <div class="iframe">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ASCMw-UCafA?si=2gJQZQaPcqCzrI5s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
+
+
+## video example
+
+<video autoplay="" onloadedmetadata="this.muted = true" loop="" playsinline="" muted=""><source type="video/mp4" src="https://images-cdn.exchange.art/XzZdrBX8U1xzrWLiEdsb2S-b-wSMomhpRQgxkdxAp5k?ext=fastly"></video>

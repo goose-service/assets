@@ -4,8 +4,8 @@ import sveltePreprocess from 'svelte-preprocess'
 import compileComponents from './plugins/compileComponents'
 
 const config = defineConfig(({ mode }) => {
-  const path = process.cwd()
-  const env = loadEnv(mode, path)
+  const path = import.meta.dir
+  // const env = loadEnv(mode, path)
   return {
     base: './',
     server: {
