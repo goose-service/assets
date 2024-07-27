@@ -1,5 +1,5 @@
 import { Marked } from 'marked'
-import * as examples from './examples'
+import * as examples from './examples/index.js'
 import './main.scss'
 
 // set marked

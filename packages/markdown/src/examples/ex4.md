@@ -1,9 +1,16 @@
+# Grid Image Styles
+
+여러장의 이미지를 그리드 형태를 만들 수 있도록 도와준다.
+
+
+## 한장으로 사용할때의 모습
 
 ![image](https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg)
 
-일반 이미지
+일반적으로 이미지를 넣을때 이렇게 한장이 단독으로 들어간다.
 
-## grid-item solo
+
+## 그리드 기본예제
 
 단독으로 사용할때의 예제
 
@@ -12,12 +19,30 @@
 <p><goose-dark-mode-image src-light="https://goose.redgoose.me/data/upload/original/202106/slideshow-001-light.png" src-dark="https://goose.redgoose.me/data/upload/original/202106/slideshow-001-dark.png" alt="Slideshow"/></p>
 </figure>
 
+다음과 같은 코드로 사용한다.
 
-## responsive
+```html
+<figure class="grid-item" data-mobile="2">
+  <p><img src="image.jpg" alt=""/></p>
+  <p><img src="image.jpg" alt=""/></p>
+</figure>
+```
+
+
+## 반응형 사이즈
 
 반응형 사이즈일때 사용하는 예제
 
-<figure class="grid-item" data-mobile="1" data-tablet="2" data-desktop="3" data-desktop-large="4" data-ratio="21/9" data-ratio-desktop="4/3">
+<figure
+  class="grid-item"
+  data-mobile="1"
+  data-tablet="2"
+  data-desktop="3"
+  data-desktop-large="4"
+  data-ratio="21/9"
+  data-ratio-tablet="6/4"
+  data-ratio-desktop="3/4"
+  data-ratio-desktop-large="1/1">
 <p><img src="https://goose.redgoose.me/data/upload/original/202306/TRON_Lightcycle-Run_stillion-00165.webp" alt="TRON_Lightcycle-Run_stillion-00165.webp"/></p>
 <p><img src="https://goose.redgoose.me/data/upload/original/202305/AI_A_close-up_of_a_dragon_sculpture_made_of_jadeJadeJellyEx_a49035c7-2d53-4cd0-a9a3-5f4b99da8477.png" alt=""/></p>
 <p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
@@ -26,12 +51,131 @@
 <p><img src="https://goose.redgoose.me/data/upload/original/202101/rg-20180526-000156.jpg" alt=""/></p>
 </figure>
 
+```html
+<figure
+  class="grid-item"
+  data-mobile="1"
+  data-tablet="2"
+  data-desktop="3"
+  data-desktop-large="4"
+  data-ratio="21/9"
+  data-ratio-tablet="6/4"
+  data-ratio-desktop="4/3"
+  data-ratio-desktop-large="1/1">
+  <p><img src="image.jpg" alt=""/></p>
+  <p><img src="image.jpg" alt=""/></p>
+</figure>
+```
+
+사이즈에 따른 컬럼의 수와 이미지 비율
+
+- `data-mobile`: 모바일 사이즈
+- `data-tablet`: 태블릿 사이즈
+- `data-desktop`: 데스크탑 사이즈
+- `data-desktop-large`: 큰 데스크탑 사이즈
+- `data-ratio`: 이미지 비율 (모바일)
+- `data-ratio-tablet`: 이미지 비율 (태블릿)
+- `data-ratio-desktop`: 이미지 비율 (데스크탑)
+- `data-ratio-desktop-large`: 이미지 비율 (큰 데스크탑)
+
 
 ## column
 
-컬럼에서의 값 조정
+그리드 컬럼의 예제, 값은 `6`까지 사용할 수 있다.
 
-<figure class="grid-item" data-mobile="4" data-ratio="4/6">
-<p col="4" col-tablet="2"><img src="https://goose.redgoose.me/data/upload/original/202305/AI_A_close-up_of_a_dragon_sculpture_made_of_jadeJadeJellyEx_a49035c7-2d53-4cd0-a9a3-5f4b99da8477.png" alt=""/></p>
-<p col="4" col-tablet="2"><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
+<div class="grid-group">
+<figure class="grid-item" data-mobile="1" data-ratio="21/9">
+<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
 </figure>
+<figure class="grid-item" data-mobile="2" data-ratio="16/9">
+<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
+<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
+</figure>
+<figure class="grid-item" data-mobile="3" data-ratio="16/9">
+<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
+<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
+<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
+</figure>
+<figure class="grid-item" data-mobile="4" data-ratio="16/9">
+<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
+<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
+<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
+<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
+</figure>
+<figure class="grid-item" data-mobile="5" data-ratio="16/9">
+<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
+<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
+<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
+<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
+<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
+</figure>
+<figure class="grid-item" data-mobile="6" data-ratio="16/9">
+<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
+<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
+<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
+<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
+<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
+<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
+</figure>
+</div>
+
+```html
+<figure class="grid-item" data-mobile="1"/>
+<figure class="grid-item" data-mobile="2"/>
+<figure class="grid-item" data-mobile="3"/>
+<figure class="grid-item" data-mobile="4"/>
+<figure class="grid-item" data-mobile="5"/>
+<figure class="grid-item" data-mobile="6"/>
+```
+
+
+## 이미지 비율
+
+이미지 사이즈 비율을 정한다. 사용할 수 있는 값은 다음과 같다.
+
+- `data-ratio="1/1"`
+- `data-ratio="2/1"`
+- `data-ratio="1/2`
+- `data-ratio="4/3"`
+- `data-ratio="3/4"`
+- `data-ratio="6/4"`
+- `data-ratio="4/6"`
+- `data-ratio="10/8"`
+- `data-ratio="8/10"`
+- `data-ratio="16/9"`
+- `data-ratio="21/9"`
+
+<div class="grid-group">
+<figure class="grid-item" data-mobile="3" data-ratio="1/1">
+<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
+<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
+<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
+</figure>
+<figure class="grid-item" data-mobile="2" data-ratio="16/9">
+<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
+<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
+</figure>
+<figure class="grid-item" data-mobile="1" data-ratio="21/9">
+<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
+</figure>
+<figure class="grid-item" data-mobile="4" data-ratio="3/4">
+<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
+<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
+<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
+<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
+</figure>
+</div>
+
+
+## 그리드 그룹
+
+여러개의 그리드들을 묶어서 사용할 수 있다.
+
+```html
+<div class="grid-group">
+  <figure class="grid-item"/>
+  <figure class="grid-item"/>
+  <figure class="grid-item"/>
+</div>
+```
+

@@ -1,3 +1,5 @@
+# Project "Slideshow"
+
 <goose-dark-mode-image
   src-light="https://goose.redgoose.me/data/upload/original/202106/slideshow-001-light.png"
   src-dark="https://goose.redgoose.me/data/upload/original/202106/slideshow-001-dark.png"

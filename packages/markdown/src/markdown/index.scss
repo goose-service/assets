@@ -1,6 +1,6 @@
 @use './mixins';
 
-$ratios: '2/1', '1/2', '6/4', '4/6', '4/3', '3/4', '16/9', '21/9';
+$ratios: '1/1', '2/1', '1/2', '4/3', '3/4', '6/4', '4/6', '10/8', '8/10', '16/9', '21/9';
 
 .redgoose-body {
   // typography
@@ -12,13 +12,13 @@ $ratios: '2/1', '1/2', '6/4', '4/6', '4/3', '3/4', '16/9', '21/9';
   --mk-size-side-padding: var(--markdown-size-side-padding, 24px);
 
   // margin
-  --mk-size-margin: var(--markdown-size-margin, 2rem);
+  --mk-size-margin: var(--markdown-size-margin, 1.5rem);
 
   // heading
   --mk-hd-scroll-margin-top: var(--markdown-head-scroll-margin-top, unset);
 
   // img
-  --mk-size-img-margin: var(--markdown-size-img-margin, #{4rem 0 2rem});
+  --mk-size-img-margin: var(--markdown-size-img-margin, #{3rem 0 1.5rem});
 
   // code
   --mk-color-code-text: var(--markdown-color-code-text, hsl(140 80% 42%));
@@ -40,23 +40,8 @@ $ratios: '2/1', '1/2', '6/4', '4/6', '4/3', '3/4', '16/9', '21/9';
   --mk-size-hr-text: var(--markdown-size-hr-text, 12px);
   --mk-color-hr-text: var(--markdown-color-hr-text, --mk-color-base);
 
-  // dark mode
-  &--dark {
-    @include mixins.dark-mode() {
-      // typography
-      --mk-color-base: var(--markdown-color-base, hsl(0 0% 92%));
-      --mk-color-title: var(--markdown-color-title, hsl(0, 0%, 100%));
-      --mk-color-key: var(--markdown-color-key, hsl(142 76% 46%));
-      // code
-      --mk-color-code-text: var(--markdown-color-code-text, hsl(45 100% 60%));
-      --mk-color-code-bg: var(--markdown-color-code-bg, hsl(0 0% 16%));
-      // blockquote
-      --mk-color-blockquote-outline: var(--markdown-color-blockquote-outline, hsl(0 0% 16%));
-      // table
-      --mk-color-table-line: var(--markdown-color-table-line, hsl(0 0% 20%));
-      --mk-color-table-head-bg: var(--markdown-color-table-head-bg, hsl(0 0% 10%));
-    }
-  }
+  // image
+  --image-width: 100vw;
 
   font-size: var(--mk-size-text);
   line-height: var(--mk-size-text-length);
@@ -95,21 +80,21 @@ $ratios: '2/1', '1/2', '6/4', '4/6', '4/3', '3/4', '16/9', '21/9';
     }
   }
   :where(h1, h2, h3) {
-    margin: calc(var(--mk-size-margin) * 2) 0 calc(var(--mk-size-margin) * 1);
+    margin: calc(var(--mk-size-margin) * 2.5) 0 calc(var(--mk-size-margin) * 1.25);
     font-weight: 800;
-    line-height: 1.15;
+    line-height: 1.05;
   }
   :where(h4, h5, h6) {
-    margin: calc(var(--mk-size-margin) * 1.25) 0 calc(var(--mk-size-margin) * .75);
+    margin: calc(var(--mk-size-margin) * 1.5) 0 calc(var(--mk-size-margin) * .75);
     font-weight: 600;
-    line-height: 1.25;
+    line-height: 1.15;
   }
-  h1 { font-size: 2.25em; letter-spacing: -.01em; }
-  h2 { font-size: 2em; letter-spacing: -.01em; }
-  h3 { font-size: 1.75em; letter-spacing: -.005em; }
-  h4 { font-size: 1.5em; letter-spacing: -.005em; }
-  h5 { font-size: 1.25em; }
-  h6 { font-size: 1em; }
+  h1 { font-size: 2.25em; letter-spacing: -.025em; }
+  h2 { font-size: 1.75em; letter-spacing: -.015em; }
+  h3 { font-size: 1.5em; letter-spacing: -.005em; }
+  h4 { font-size: 1.25em; letter-spacing: -.005em; }
+  h5 { font-size: 1em; }
+  h6 { font-size: .75em; }
   p {
     margin: var(--mk-size-margin) 0;
     word-break: keep-all;
@@ -254,7 +239,6 @@ $ratios: '2/1', '1/2', '6/4', '4/6', '4/3', '3/4', '16/9', '21/9';
   }
 
   // image
-  --image-width: 100vw;
   @include mixins.responsive(desktop) {
     --image-width: 1000px;
   }
@@ -318,6 +302,24 @@ $ratios: '2/1', '1/2', '6/4', '4/6', '4/3', '3/4', '16/9', '21/9';
   > *:last-child,
   > *:last-child *:last-child {
     margin-bottom: 0;
+  }
+
+  // dark mode
+  &--dark {
+    @include mixins.dark-mode() {
+      // typography
+      --mk-color-base: var(--markdown-color-base, hsl(0 0% 92%));
+      --mk-color-title: var(--markdown-color-title, hsl(0, 0%, 100%));
+      --mk-color-key: var(--markdown-color-key, hsl(142 76% 46%));
+      // code
+      --mk-color-code-text: var(--markdown-color-code-text, hsl(45 100% 60%));
+      --mk-color-code-bg: var(--markdown-color-code-bg, hsl(0 0% 16%));
+      // blockquote
+      --mk-color-blockquote-outline: var(--markdown-color-blockquote-outline, hsl(0 0% 16%));
+      // table
+      --mk-color-table-line: var(--markdown-color-table-line, hsl(0 0% 20%));
+      --mk-color-table-head-bg: var(--markdown-color-table-head-bg, hsl(0 0% 10%));
+    }
   }
 }
 
