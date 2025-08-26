@@ -3,7 +3,7 @@ FROM alpine:${ALPINE_VERSION}
 MAINTAINER redgoose <scripter@me.com>
 
 WORKDIR /app
-ENV PORT=5050
+ENV PORT=80
 
 RUN apk add --no-cache curl nginx
 

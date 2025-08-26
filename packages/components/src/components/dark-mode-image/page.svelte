@@ -66,8 +66,8 @@ import readme from './README.md?raw'
 
 const elementKey = 'dark-mode-image'
 let imageInfoForm = {
-  srcLight: 'https://goose.redgoose.me/data/upload/original/202106/slideshow-001-light.png',
-  srcDark: 'https://goose.redgoose.me/data/upload/original/202106/slideshow-001-dark.png',
+  srcLight: 'https://goose.redgoose.me/file/aUoAaUcPKZckCAlo/',
+  srcDark: 'https://goose.redgoose.me/file/G8o3hGhtfKu6GjVX/',
   alt: 'image message',
 }
 let imageInfo = Object.assign({}, imageInfoForm)

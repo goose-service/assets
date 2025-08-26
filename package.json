@@ -1,10 +1,10 @@
 {
   "name": "@redgoose/assets",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "author": "redgoose <scripter@me.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gooose-eth/assets.git"
+    "url": "https://github.com/goose-service/assets.git"
   },
   "files": [
     "dest"
@@ -17,13 +17,12 @@
   "scripts": {
     "clean": "./scripts/clean.sh",
     "build": "./scripts/build.sh",
-    "demo": "bun run --bun ./scripts/demo.js",
-    "docker": "./scripts/docker.sh"
+    "demo": "bun run --bun ./scripts/demo.js"
   },
   "workspaces": [
     "packages/*"
   ],
   "dependencies": {
-    "hono": "^4.5.1"
+    "hono": "^4.9.4"
   }
 }

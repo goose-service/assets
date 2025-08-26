@@ -1,8 +1,8 @@
+import { mount } from 'svelte'
 import App from './pages/app.svelte'
 import './main.scss'
 
-const app = new App({
-  target: document.getElementById('app')
+mount(App, {
+  target: document.getElementById('app'),
+  props: {},
 })
-
-export default app

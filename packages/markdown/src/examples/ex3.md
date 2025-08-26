@@ -1,8 +1,8 @@
 # Project "Slideshow"
 
 <goose-dark-mode-image
-  src-light="https://goose.redgoose.me/data/upload/original/202106/slideshow-001-light.png"
-  src-dark="https://goose.redgoose.me/data/upload/original/202106/slideshow-001-dark.png"
+  src-light="https://goose.redgoose.me/file/aUoAaUcPKZckCAlo/"
+  src-dark="https://goose.redgoose.me/file/G8o3hGhtfKu6GjVX/"
   alt="Slideshow"/>
 
 - date: 2019-02-24
@@ -28,7 +28,7 @@
 관리자로 무엇을 할 것인지에 대하여 역할을 미리 정해두는 것이 가장 중요하다고 생각했다.
 처음 구상하기 시작할때 적어도 작품 검색이 편했으면 하는 바램이 가장컷다. 그리고 검색한 작품으로 또다른 기능에 활용하는 재료로 사용했으면 좋겠다고 생각했다.
 
-![bbuzzart-manager-001.jpg](https://goose.redgoose.me/data/upload/original/201905/bbuzzart-manager-001.jpg)
+![bbuzzart-manager-001.jpg](https://goose.redgoose.me/file/CoMdW2vz5vKV6p8E/)
 
 작품이라는 것은 명확하게 키워드로 제목이나 내용을 검색하기엔 애매한 주제다.
 쇼핑몰의 상품같이 사진을 객관적으로 설명할 수 없는 것들이 대부분이다. 그래서 느낌의 표현에 대한 단서들을 통하여 필터링 해내는것이 이상적이라고 생각한다. 키워드, 색깔, 단어, 장르 같은 것들을 서로 교집합을 통하여 원하는 취향으로 작품을 뽑아내는것을 목표로 잡고 있었다.
@@ -39,11 +39,11 @@
 
 요소가 많고, 무거운 색을 사용하게 된다면 사용하는데 부담감이 느껴질거라는 생각에 가볍고 단순한 레이아웃으로 만들어 보기로 했다.
 
-![bbuzzart-manager-002.jpg](https://goose.redgoose.me/data/upload/original/201905/bbuzzart-manager-002.jpg)
+![bbuzzart-manager-002.jpg](https://goose.redgoose.me/file/L34xOjySrMWfHeWF/)
 
 내부 컨텐츠 영역에서는 `element-ui`를 통해서 UI를 만들 예정이어서 `balsamiq mockup`툴을 이용하여 와이어프레임 형태로 UI 형태만 빠르게 그리고, 바로 마크업하고, 개발하였다.
 
-![bbuzzart-manager-003.jpg](https://goose.redgoose.me/data/upload/original/201905/bbuzzart-manager-003.jpg)
+![bbuzzart-manager-003.jpg](https://goose.redgoose.me/file/CoMdW2vz5vKV6p8E/)
 
 UI 프레임워크는 실질적으로 사용해본것은 처음이라서 처음 사용할때는 꽤 편해보였다.
 
@@ -52,7 +52,7 @@ UI 프레임워크는 실질적으로 사용해본것은 처음이라서 처음 
 본격적으로 개발을 시작하기전에 먼저 `vue.js` 를 이용하여 환경설정을 시작했다.
 대부분 `nuxt.js` 로 작업을 하다가 `vue-cli`를 통하여 개발환경을 만들어보니 상대적으로 직접 커스터마이즈를 많이 할 수 있어보였다. 다르게 말하자면 환경을 만드는데 손이 많이 간다고 할 수 있다.
 
-![bbuzzart-manager-004.png](https://goose.redgoose.me/data/upload/original/201905/bbuzzart-manager-004.png)
+![bbuzzart-manager-004.png](https://goose.redgoose.me/file/lC3eB2xwmxMnYyH8/)
 
 디테일하게 view, store, assets, router 부분들의 영역을 배분하는데 꽤 고민을 했다. 이런것들을 잘 설계를 해둬야지 기능이 계속 추가될 때 쉽게 만들 수 있거나 구조가 꼬이지 않을 것이다.
 특히 router 부분에서 직접 map을 만들어 컴포넌트로 연결해줘야 하는 방식이 꽤 번거롭게 느껴졌다. (계속 `nuxt.js`만 사용해 왔으므로..)
@@ -62,11 +62,11 @@ UI 프레임워크는 실질적으로 사용해본것은 처음이라서 처음 
 레이아웃 부분은 구조가 단순하고, ui 프레임워크를 사용하기에 애매한 부분이 많아서 직접 만들었다.
 대신 컨텐츠 부분에서의 마크업과 컴포넌트 제작 부분에 관해서는 상당히 쉽게 만들어나갈 수 있었다.
 
-![bbuzzart-manager-006.jpg](https://goose.redgoose.me/data/upload/original/201905/bbuzzart-manager-006.jpg)
+![bbuzzart-manager-006.jpg](https://goose.redgoose.me/file/vCcWvW0wMNLnszXN/)
 
 작은 단위의 컴포넌트는 대부분 `element-ui` 프레임워크가 담당하였고(button, text-input, checkbox, switch..), 이것들을 조합하여 레이아웃을 뼈대가 되는 컴포넌트를 만드는것부터 시작하여 페이지가 되는 view 영역의 컴포넌트들을 만들어갔다.
 
-![bbuzzart-manager-005.png](https://goose.redgoose.me/data/upload/original/201905/bbuzzart-manager-005.png)
+![bbuzzart-manager-005.png](https://goose.redgoose.me/file/dbzTc5FMItVEG9OL/)
 
 개인적으로 느끼기엔 `element-ui` 의 grid 시스템은 꽤 불편했다.
 기초적인 베이스는 `flex`가 아닌 `floating` 방식으로 만들어져 있지만 속성값으로 `flex` 방식으로 바꾸어줄 수 있다.
@@ -80,14 +80,14 @@ UI 프레임워크는 실질적으로 사용해본것은 처음이라서 처음 
 목록에서의 요소는 작품, 회원, 컨텐츠등.. 다양한 요소로 이루어진다.
 나중에 깨닫게 되었지만 성격이 다른 요소들을 목록화 시키는 부분에서 어려웠던 점은 통일성이라고 볼 수 있다. 목록의 요소 부분은 컴포넌트화 시켜 다양하게 사용할 수 있으면서 알아보기 쉽게 만드는데 노력했다.
 
-![bbuzzart-manager-007.jpg](https://goose.redgoose.me/data/upload/original/201905/bbuzzart-manager-007.jpg)
+![bbuzzart-manager-007.jpg](https://goose.redgoose.me/file/dbzTc5FMItVEG9OL/)
 
 하나의 크게 시행착오를 겪은 부분은 검색에 관련된 인터페이스 부분이었는데, 처음 생각으로는 필터링 2,3개와 키워드 검색부분만 넣고 나머지는 확장필터라는 형태로 별도의 화면으로 필터링 인터페이스를 만들 계획으로 필터링 영역을 가로로 배치시켰다.
 
 나중에 조금씩 만들어보니 가로로 배치되어있는 필터링이 화면 스크롤로 내리다보면 안보이게 되어 사용에 불편하다는것을 깨닫게 되었다.
 이미 컨텐츠 몇개는 만들어져 있는 상태에서 다시 되돌아가서 고치는건 시간적인 소모가 많아서 새로 만들어지는 부분에서 먼저 사용하고 나중에 시간날때 하나씩 다시 리팩토링을 하게 되었다.
 
-![bbuzzart-manager-008.jpg](https://goose.redgoose.me/data/upload/original/201905/bbuzzart-manager-008.jpg)
+![bbuzzart-manager-008.jpg](https://goose.redgoose.me/file/QZZRRDzMVYS9NrJ8/)
 
 최종적으로는 목록 오른쪽 사이드 영역으로 배치하고 목록이 스크롤이 되더라도 위치가 그대로 유지할 수 있도록 고정시켰다. 이렇게 고정시켜보니 필터의 값을 변경하고 업데이트된 목록을 확인하고 다시 필터를 바꾸기가 굉장히 쉬워졌다.
 
@@ -99,7 +99,7 @@ API 연동에 대해서는 기술적으로 그다지 어렵게 만들지는 않�
 
 서버 개발자가 관리자 기능 추가 요청을 할때도 있고, 기획이나 디자인을 한 다음에 서버 개발자에게 기능 추가 요청을 할때가 있는데 그럴때는 서로 대화를 하면서 대략적으로 와이어프레임을 그린다.
 
-![bbuzzart-manager-009.jpg](https://goose.redgoose.me/data/upload/original/201905/bbuzzart-manager-009.jpg)
+![bbuzzart-manager-009.jpg](https://goose.redgoose.me/file/FFGYwPTnc8EO2XeX/)
 
 백엔드와 프론트엔드의 대략적인 작업과정은 다음과 같다.
 
@@ -116,7 +116,7 @@ API 연동에 대해서는 기술적으로 그다지 어렵게 만들지는 않�
 
 주요 기능들은 다 만들어진 상태고, 그 이후로 어떻게 기능이 더 늘어나게 되는지는 모르겠지만 잘 쓰였으면 좋겠다.
 
-![bbuzzart-manager-010.jpg](https://goose.redgoose.me/data/upload/original/201905/bbuzzart-manager-010.jpg)
+![bbuzzart-manager-010.jpg](https://goose.redgoose.me/file/4WMtqNV5nXZxbZWk/)
 
 특히 UI에 관해서는 UI 프레임워크를 사용했지만 그것을 활용하는 부분에도 결국 많은 고민과 노력이 필요했다.
 

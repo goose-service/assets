@@ -57,6 +57,7 @@ html[data-theme=dark]:is(dark-mode-switch) {
 - `--dark-switch-inner-bg`: 볼의 배경색 (hsla(0 0% 100%))
 - `--dark-switch-inner-shadow`: 볼의 그림자 (0 0 6px hsla(0 0% 0% / 20%))
 - `--dark-switch-active-offset`: 엑티브 상태에서 볼이 이동하는 간격 (4px)
+- `--dark-switch-focus-style`: 포커스 상태의 외곽선 스타일 (none,dotted,solid,groove,dashed,inset)
 - `--dark-switch-focus-color`: 포커스 상태의 외곽선 색 (hsl(350 70% 41%))
 - `--dark-switch-focus-width`: 포커스 상태의 외곽선 두께 (2px)
 - `--dark-switch-icon-size`: 아이콘 사이즈 (12px)

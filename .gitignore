@@ -6,7 +6,4 @@ dest/
 
 # files
 .DS_Store
-yarn.lock
-package-lock.json
-bun.lockb
 scripts/docker.sh

@@ -27,7 +27,11 @@ const config = defineConfig(({ mode }) => {
     plugins: [
       svelte({
         preprocess: sveltePreprocess(),
-        compilerOptions: {},
+        compilerOptions: {
+          compatibility: {
+            // componentApi: 4,
+          }
+        },
         onwarn(warning, defaultHandler)
         {
           // console.log('======>', warning.code)

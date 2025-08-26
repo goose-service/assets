@@ -12,6 +12,8 @@
   border: none;
   transition: background-color 200ms ease-out, box-shadow 200ms ease-out;
   overflow: hidden;
+  outline-style: var(--dark-switch-focus-style, solid);
+  outline-color: color-mix(in hsl, var(--dark-switch-focus-color, hsl(350 70% 41%)) 0%, transparent);
   -webkit-tap-highlight-color: transparent;
   & i {
     --size: calc(var(--dark-switch-height, 24px) - (var(--dark-switch-padding, 2px) * 2));
@@ -47,7 +49,6 @@
     color: var(--dark-switch-icon-color-dark, hsl(190, 100%, 72%));
   }
   &:focus-visible {
-    outline-style: solid;
     outline-width: var(--dark-switch-focus-width, 2px);
     transition: outline-color 200ms ease-out;
   }

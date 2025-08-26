@@ -5,7 +5,7 @@
 
 ## 한장으로 사용할때의 모습
 
-![image](https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg)
+![image](https://goose.redgoose.me/file/SjXaLJa7LsO10FGt/)
 
 일반적으로 이미지를 넣을때 이렇게 한장이 단독으로 들어간다.
 
@@ -15,8 +15,8 @@
 단독으로 사용할때의 예제
 
 <figure class="grid-item" data-mobile="2">
-<p><img src="https://goose.redgoose.me/data/upload/original/202306/TRON_Lightcycle-Run_stillion-00165.webp" alt="TRON_Lightcycle-Run_stillion-00165.webp"/></p>
-<p><goose-dark-mode-image src-light="https://goose.redgoose.me/data/upload/original/202106/slideshow-001-light.png" src-dark="https://goose.redgoose.me/data/upload/original/202106/slideshow-001-dark.png" alt="Slideshow"/></p>
+<p><img src="https://goose.redgoose.me/file/XcebsMm6cualSVAP/" alt="TRON_Lightcycle-Run_stillion-00165.webp"/></p>
+<p><goose-dark-mode-image src-light="https://goose.redgoose.me/file/aUoAaUcPKZckCAlo/" src-dark="https://goose.redgoose.me/file/G8o3hGhtfKu6GjVX/" alt="Slideshow"/></p>
 </figure>
 
 다음과 같은 코드로 사용한다.
@@ -43,12 +43,12 @@
   data-ratio-tablet="6/4"
   data-ratio-desktop="3/4"
   data-ratio-desktop-large="1/1">
-<p><img src="https://goose.redgoose.me/data/upload/original/202306/TRON_Lightcycle-Run_stillion-00165.webp" alt="TRON_Lightcycle-Run_stillion-00165.webp"/></p>
-<p><img src="https://goose.redgoose.me/data/upload/original/202305/AI_A_close-up_of_a_dragon_sculpture_made_of_jadeJadeJellyEx_a49035c7-2d53-4cd0-a9a3-5f4b99da8477.png" alt=""/></p>
-<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
-<p><img src="https://goose.redgoose.me/data/upload/original/202010/rg-20171021-000538.jpg" alt=""/></p>
-<p><img src="https://goose.redgoose.me/data/upload/original/202103/rg-20180616-000192.jpg" alt=""/></p>
-<p><img src="https://goose.redgoose.me/data/upload/original/202101/rg-20180526-000156.jpg" alt=""/></p>
+<p><img src="https://goose.redgoose.me/file/XcebsMm6cualSVAP/" alt="TRON_Lightcycle-Run_stillion-00165.webp"/></p>
+<p><img src="https://goose.redgoose.me/file/ZqVK7DlrGKlEHr2E/" alt=""/></p>
+<p><img src="https://goose.redgoose.me/file/SjXaLJa7LsO10FGt/" alt=""/></p>
+<p><img src="https://goose.redgoose.me/file/Ft4UGg1CtGSpfinK/" alt=""/></p>
+<p><img src="https://goose.redgoose.me/file/MzNMLq15eYoYLqVZ/" alt=""/></p>
+<p><img src="https://goose.redgoose.me/file/ktFO2Mp1xvVTBilQ/" alt=""/></p>
 </figure>
 
 ```html
@@ -85,37 +85,37 @@
 
 <div class="grid-group">
 <figure class="grid-item" data-mobile="1" data-ratio="21/9">
-<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
+<p><img src="https://goose.redgoose.me/file/SjXaLJa7LsO10FGt/" alt=""/></p>
 </figure>
 <figure class="grid-item" data-mobile="2" data-ratio="16/9">
-<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
-<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
+<p><img src="https://goose.redgoose.me/file/SjXaLJa7LsO10FGt/" alt=""/></p>
+<p><img src="https://goose.redgoose.me/file/SjXaLJa7LsO10FGt/" alt=""/></p>
 </figure>
 <figure class="grid-item" data-mobile="3" data-ratio="16/9">
-<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
-<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
-<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
+<p><img src="https://goose.redgoose.me/file/SjXaLJa7LsO10FGt/" alt=""/></p>
+<p><img src="https://goose.redgoose.me/file/SjXaLJa7LsO10FGt/" alt=""/></p>
+<p><img src="https://goose.redgoose.me/file/SjXaLJa7LsO10FGt/" alt=""/></p>
 </figure>
 <figure class="grid-item" data-mobile="4" data-ratio="16/9">
-<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
-<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
-<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
-<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
+<p><img src="https://goose.redgoose.me/file/SjXaLJa7LsO10FGt/" alt=""/></p>
+<p><img src="https://goose.redgoose.me/file/SjXaLJa7LsO10FGt/" alt=""/></p>
+<p><img src="https://goose.redgoose.me/file/SjXaLJa7LsO10FGt/" alt=""/></p>
+<p><img src="https://goose.redgoose.me/file/SjXaLJa7LsO10FGt/" alt=""/></p>
 </figure>
 <figure class="grid-item" data-mobile="5" data-ratio="16/9">
-<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
-<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
-<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
-<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
-<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
+<p><img src="https://goose.redgoose.me/file/SjXaLJa7LsO10FGt/" alt=""/></p>
+<p><img src="https://goose.redgoose.me/file/SjXaLJa7LsO10FGt/" alt=""/></p>
+<p><img src="https://goose.redgoose.me/file/SjXaLJa7LsO10FGt/" alt=""/></p>
+<p><img src="https://goose.redgoose.me/file/SjXaLJa7LsO10FGt/" alt=""/></p>
+<p><img src="https://goose.redgoose.me/file/SjXaLJa7LsO10FGt/" alt=""/></p>
 </figure>
 <figure class="grid-item" data-mobile="6" data-ratio="16/9">
-<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
-<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
-<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
-<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
-<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
-<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
+<p><img src="https://goose.redgoose.me/file/SjXaLJa7LsO10FGt/" alt=""/></p>
+<p><img src="https://goose.redgoose.me/file/SjXaLJa7LsO10FGt/" alt=""/></p>
+<p><img src="https://goose.redgoose.me/file/SjXaLJa7LsO10FGt/" alt=""/></p>
+<p><img src="https://goose.redgoose.me/file/SjXaLJa7LsO10FGt/" alt=""/></p>
+<p><img src="https://goose.redgoose.me/file/SjXaLJa7LsO10FGt/" alt=""/></p>
+<p><img src="https://goose.redgoose.me/file/SjXaLJa7LsO10FGt/" alt=""/></p>
 </figure>
 </div>
 
@@ -147,22 +147,22 @@
 
 <div class="grid-group">
 <figure class="grid-item" data-mobile="3" data-ratio="1/1">
-<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
-<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
-<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
+<p><img src="https://goose.redgoose.me/file/SjXaLJa7LsO10FGt/" alt=""/></p>
+<p><img src="https://goose.redgoose.me/file/SjXaLJa7LsO10FGt/" alt=""/></p>
+<p><img src="https://goose.redgoose.me/file/SjXaLJa7LsO10FGt/" alt=""/></p>
 </figure>
 <figure class="grid-item" data-mobile="2" data-ratio="16/9">
-<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
-<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
+<p><img src="https://goose.redgoose.me/file/SjXaLJa7LsO10FGt/" alt=""/></p>
+<p><img src="https://goose.redgoose.me/file/SjXaLJa7LsO10FGt/" alt=""/></p>
 </figure>
 <figure class="grid-item" data-mobile="1" data-ratio="21/9">
-<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
+<p><img src="https://goose.redgoose.me/file/SjXaLJa7LsO10FGt/" alt=""/></p>
 </figure>
 <figure class="grid-item" data-mobile="4" data-ratio="3/4">
-<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
-<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
-<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
-<p><img src="https://goose.redgoose.me/data/upload/original/202305/864a27169821967-64535d45f32e9.jpg" alt=""/></p>
+<p><img src="https://goose.redgoose.me/file/SjXaLJa7LsO10FGt/" alt=""/></p>
+<p><img src="https://goose.redgoose.me/file/SjXaLJa7LsO10FGt/" alt=""/></p>
+<p><img src="https://goose.redgoose.me/file/SjXaLJa7LsO10FGt/" alt=""/></p>
+<p><img src="https://goose.redgoose.me/file/SjXaLJa7LsO10FGt/" alt=""/></p>
 </figure>
 </div>
 
