@@ -7,12 +7,12 @@ HOST="redgoose.me"
 
 build() {
   ./scripts/build.sh
-  podman buildx build -t $IMAGE_NAME .
+  docker build -t $IMAGE_NAME .
 }
 
 upload() {
-  podman save -o $TMP_FILE $IMAGE_NAME
-  cat $TMP_FILE | ssh $HOST 'podman load'
+  docker save -o $TMP_FILE $IMAGE_NAME
+  cat $TMP_FILE | ssh $HOST 'docker load'
   rm $TMP_FILE
 }
 
