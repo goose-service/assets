@@ -1,4 +1,4 @@
-ARG ALPINE_VERSION=3.20.2
+ARG ALPINE_VERSION=3.23.3
 FROM alpine:${ALPINE_VERSION}
 MAINTAINER redgoose <scripter@me.com>
 

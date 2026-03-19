@@ -19,12 +19,12 @@ const config = defineConfig(({ mode }) => {
         output: {
           entryFileNames: 'assets/[name]-[hash].js',
           assetFileNames: (assetInfo) => {
-            const info = assetInfo.name.split('.')
-            const name = info[0]
-            const ext = info[info.length - 1]
+            const info = assetInfo.name?.split('.') || ''
+            const ext = info ? info[info.length - 1] : ''
             switch (ext)
             {
               case 'woff2':
+                const name = info[0]
                 if (/^ortsa/.test(name))
                 {
                   return `ortsa/[name][extname]`

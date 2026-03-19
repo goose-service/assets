@@ -77,7 +77,7 @@ a {
 
 .images-basic {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(var(--column, 2), 1fr);
   gap: 0 24px;
   margin: 20px 0 0;
   figure {
@@ -105,9 +105,15 @@ a {
       }
     }
   }
+  &.col-3 {
+    --column: 3;
+  }
   @media (screen and max-width: 768px) {
-    grid-template-columns: 1fr;
+    --column: 1;
     gap: 24px 24px;
+    &.col-3 {
+      --column: 1;
+    }
   }
 }
 
